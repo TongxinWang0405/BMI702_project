@@ -7,3 +7,5 @@ Something related to vision foundation models for medical imagine i.e. pathology
 Something about protein function prediction or structure.
 
 Something leveraging methods related to model distillation.
+
+Training a light weight pathology or dermatology VLM through captioning or contrastive learning.
