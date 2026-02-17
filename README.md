@@ -1,11 +1,10 @@
 # BMI702_project
 BMI 702 Course Project
 
-# Project Ideas
-Something related to vision foundation models for medical imagine i.e. pathology, dermatology, ultrasound
+# Project Topic
+A visual-language model for Ultrasound images (diagnostic medical sonography).
 
-Something about protein function prediction or structure.
-
-Something leveraging methods related to model distillation.
-
-Training a light weight pathology or dermatology VLM through captioning or contrastive learning.
+Important references: 
+1. method for multi-modal alignment in medical imaging through contrastive learning - https://www.nature.com/articles/s41591-024-02856-4
+2. SOTA image-only ultrasound foundation model that can serve as the backbone for out image encoder, also released a large dataset we will use - https://arxiv.org/abs/2509.11752
+3. Previous SOTA used frequency modality we will also consider - https://www.sciencedirect.com/science/article/abs/pii/S1361841524001270
