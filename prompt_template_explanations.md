@@ -1,9 +1,5 @@
 # Prompt Template
-We use prompt templates to expand class labels in our datasets. 
-
-Depending on the information available, we classified our data into three categories: datasets with tissue label only, tissue + condition labels, and detailed meta-data.
-
-We will sample our data to contain 20% from tissue only, 30% from tissue + condition, 50% from tissue + meta-txt
+To generate descriptive text captions from class labels, we apply prompt templates tailored to the metadata richness of each dataset. We categorize our data into three tiers: tissue label only, tissue and condition labels, and detailed metadata. To bias the training distribution toward richer supervision signal, we sample 20%, 30%, and 50% from each tier respectively.
 
 The following are prompt template we currently adopted.
 
@@ -24,7 +20,7 @@ Given tissue name {Tissue}:
 ]
 ```
 
-## For datasets with tissue name and condition(e.g. benign vs. malignant, normal)
+## For datasets with tissue name and condition (e.g. benign vs. malignant, normal vs. having a disease)
 Given tissue name {Tissue} and condition {Condition}:
 ```python
 [
@@ -42,12 +38,15 @@ Given tissue name {Tissue} and condition {Condition}:
 ```
 
 ## For datasets with meta-text
-We will use mroe complicated, dataset-specific logic to prepare text captions.
+We will use more complicated, dataset-specific logic to prepare text captions.
 Given the following placeholder, potential columns to fill in from the raw dataset meta-data, and fall-back for missingness:
-{PatientInfo}       Age, Gender, Is the patient pregnant                                        "a patient"
-{Region}            Tissue, Tissue_composition, zone (aggregated)                               "unknown region"
-{Findings}          Shape, Margin, Echogenicity, Posterior_features, consolidation/effusion     "unremarkable findings"
-{Condition}         Diagnosis, Classification, BIRADS, Interpretation, zone-derived severity    "unspecified condition"
+
+| Placeholder | Example Columns | Default String |
+| :--- | :--- | :--- |
+| {PatientInfo} | Age, Gender, Is the patient pregnant | "a patient" |
+| {Region} | Tissue, Tissue_composition, zone | "unknown region" |
+| {Findings} | Shape, Margin, Echogenicity, Posterior_features, consolidation, effusion | "unremarkable findings" |
+| {Condition} | Diagnosis, Classification, BIRADS, Interpretation, zone-derived severity | "unspecified condition" |
 ```python
 [
     "Ultrasound of {Region} in {PatientInfo}. {Findings}. Assessment: {Condition}.",
