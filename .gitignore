@@ -1,3 +1,4 @@
-EchoCare-main/echocare_encoder.pth
+echocare_encoder.pth
 dataset/
 .claude/
+echocare_clip_train.ipynb
