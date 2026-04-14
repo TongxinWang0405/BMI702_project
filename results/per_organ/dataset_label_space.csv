@@ -1,0 +1,5 @@
+dataset,n_samples,labels,n_labels,task_type
+AULI_resized_images,110,"benign, malignant, normal",3,3-class
+BrEaST-Lesions_USG-images_and_masks,37,"benign, malignant",2,binary
+Dataset_BUSI_with_GT,117,"benign, malignant, normal",3,3-class
+dataset_thyroid_resized_png,344,"benign, malignant, normal",3,3-class

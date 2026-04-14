@@ -1,0 +1,4 @@
+organ,n_samples,labels,n_labels,task_type
+breast,154,"benign, malignant, normal",3,3-class
+liver,110,"benign, malignant, normal",3,3-class
+thyroid,344,"benign, malignant, normal",3,3-class
