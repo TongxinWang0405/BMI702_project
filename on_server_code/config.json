@@ -1,0 +1,119 @@
+{
+  "paths": {
+    "prepared_data_root": "../data",
+    "data_split_dir": "../data_split",
+    "echocare_checkpoint": "../data/echocare_encoder.pth",
+    "checkpoints_dir": "../checkpoints",
+    "logs_dir": "../logs"
+  },
+
+  "image_encoder": {
+    "feature_size": 128,
+    "in_channels": 3,
+    "image_size": 256
+  },
+
+  "text_encoders": {
+    "clip": {
+      "type": "clip",
+      "model_name": "openai/clip-vit-base-patch32",
+      "max_seq_len": 77
+    },
+    "bert": {
+      "type": "bert",
+      "model_name": "emilyalsentzer/Bio_ClinicalBERT",
+      "max_seq_len": 128
+    }
+  },
+
+  "projection_dim": 256,
+
+  "normalization": {
+    "img_mean": [0.485, 0.456, 0.406],
+    "img_std":  [0.229, 0.224, 0.225],
+    "_comment": "These are overwritten by prepare_data.py with train-set statistics."
+  },
+
+  "split": {
+    "test_size": 0.15,
+    "val_size": 0.15,
+    "random_seed": 42,
+    "held_out_datasets": []
+  },
+
+  "training": {
+    "batch_size": 128,
+    "num_epochs": 20,
+    "lr": 1e-4,
+    "weight_decay": 1e-4,
+    "init_temperature": 0.07,
+    "num_workers": 4
+  },
+
+  "experiments": {
+    "exp1": {
+      "text_encoder_key": "clip",
+      "freeze_image": true,
+      "freeze_text":  true,
+      "checkpoint_name": "echocare_clip_mlp_heads_only.pt",
+      "best_ckpt_name": "exp1_mlp_only_best.pth",
+      "label": "Exp 1 (CLIP-text): MLP Heads Only"
+    },
+    "exp2": {
+      "text_encoder_key": "clip",
+      "freeze_image": false,
+      "freeze_text":  true,
+      "checkpoint_name": "echocare_clip_mlp_and_image_encoder.pt",
+      "best_ckpt_name": "exp2_mlp_image_best.pth",
+      "label": "Exp 2 (CLIP-text): MLP + Image Encoder"
+    },
+    "exp3": {
+      "text_encoder_key": "clip",
+      "freeze_image": true,
+      "freeze_text":  false,
+      "checkpoint_name": "echocare_clip_mlp_and_text_encoder.pt",
+      "best_ckpt_name": "exp3_mlp_text_best.pth",
+      "label": "Exp 3 (CLIP-text): MLP + Text Encoder"
+    },
+    "exp4": {
+      "text_encoder_key": "clip",
+      "freeze_image": false,
+      "freeze_text":  false,
+      "checkpoint_name": "echocare_clip_mlp_image_and_text_encoder.pt",
+      "best_ckpt_name": "exp4_mlp_image_text_best.pth",
+      "label": "Exp 4 (CLIP-text): MLP + Image + Text Encoder"
+    },
+    "exp5": {
+      "text_encoder_key": "bert",
+      "freeze_image": true,
+      "freeze_text":  true,
+      "checkpoint_name": "echocare_bert_mlp_heads_only.pt",
+      "best_ckpt_name": "exp5_bert_mlp_only_best.pth",
+      "label": "Exp 5 (Bio_ClinicalBERT): MLP Heads Only"
+    },
+    "exp6": {
+      "text_encoder_key": "bert",
+      "freeze_image": false,
+      "freeze_text":  true,
+      "checkpoint_name": "echocare_bert_mlp_and_image_encoder.pt",
+      "best_ckpt_name": "exp6_bert_mlp_image_best.pth",
+      "label": "Exp 6 (Bio_ClinicalBERT): MLP + Image Encoder"
+    },
+    "exp7": {
+      "text_encoder_key": "bert",
+      "freeze_image": true,
+      "freeze_text":  false,
+      "checkpoint_name": "echocare_bert_mlp_and_text_encoder.pt",
+      "best_ckpt_name": "exp7_bert_mlp_text_best.pth",
+      "label": "Exp 7 (Bio_ClinicalBERT): MLP + Text Encoder"
+    },
+    "exp8": {
+      "text_encoder_key": "bert",
+      "freeze_image": false,
+      "freeze_text":  false,
+      "checkpoint_name": "echocare_bert_mlp_image_and_text_encoder.pt",
+      "best_ckpt_name": "exp8_bert_mlp_image_text_best.pth",
+      "label": "Exp 8 (Bio_ClinicalBERT): MLP + Image + Text Encoder"
+    }
+  }
+}
