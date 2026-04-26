@@ -1,0 +1,1301 @@
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 21103.55it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: emilyalsentzer/Bio_ClinicalBERT
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+=== Starting Experiment 5: MLP heads only (BERT) ===
+Text encoder: bert  max_seq_len: 128
+Using device: cuda
+Found 1 dataset(s) under: ./Dataset_BUSI_with_GT
+
+  Dataset_BUSI_with_GT                      ->  ./Dataset_BUSI_with_GT/all_captions.csv
+  [Dataset_BUSI_with_GT] 780 rows | path_col='image_path' | caption_col='text_caption' | label_col='label'
+
+================================================================================
+Dataset                                      Loaded   Failed  Status
+================================================================================
+Dataset_BUSI_with_GT                            780        -  OK
+================================================================================
+TOTAL                                           780        0
+
+Combined dataset: 780 samples from 1 source(s)
+Split sizes (total = 780)
+  Train :    545  (69.9%)
+  Val   :    118  (15.1%)
+  Test  :    117  (15.0%)
+DataLoaders ready:
+  Train :   17 batches  (545 samples)
+  Val   :    4 batches  (118 samples)
+  Test  :    4 batches  (117 samples)
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+  Trainable params: 5,508,353 / 234,040,313  (2.4%)
+Learning rate: 0.0001
+Training for 20 epochs...
+  [E1] Batch 1/17 | loss=3.5154 | temp=0.0700
+  [E1] Batch 11/17 | loss=3.4856 | temp=0.0701
+  [E1] Batch 17/17 | loss=3.4569 | temp=0.0701
+>>> Epoch  1/20  Train=3.5060  Val=3.3766  LR=9.94e-05
+  [Checkpoint] best val=3.3766 -> ./checkpoints/exp5_bert_mlp_only_best.pth
+  [E2] Batch 1/17 | loss=3.4459 | temp=0.0701
+  [E2] Batch 11/17 | loss=3.4494 | temp=0.0701
+  [E2] Batch 17/17 | loss=3.4752 | temp=0.0701
+>>> Epoch  2/20  Train=3.4659  Val=3.3751  LR=9.76e-05
+  [Checkpoint] best val=3.3751 -> ./checkpoints/exp5_bert_mlp_only_best.pth
+  [E4] Batch 1/17 | loss=3.4576 | temp=0.0701
+  [E4] Batch 11/17 | loss=3.4535 | temp=0.0701
+  [E4] Batch 17/17 | loss=3.4522 | temp=0.0701
+  [E6] Batch 1/17 | loss=3.5043 | temp=0.0701
+  [E6] Batch 11/17 | loss=3.4469 | temp=0.0701
+  [E6] Batch 17/17 | loss=3.4528 | temp=0.0701
+>>> Epoch  7/20  Train=3.4453  Val=3.3451  LR=7.27e-05
+  [Checkpoint] best val=3.3451 -> ./checkpoints/exp5_bert_mlp_only_best.pth
+>>> Epoch  8/20  Train=3.4403  Val=3.3422  LR=6.55e-05
+  [Checkpoint] best val=3.3422 -> ./checkpoints/exp5_bert_mlp_only_best.pth
+  [E10] Batch 1/17 | loss=3.4396 | temp=0.0700
+  [E10] Batch 11/17 | loss=3.3712 | temp=0.0701
+  [E10] Batch 17/17 | loss=3.4216 | temp=0.0701
+>>> Epoch 11/20  Train=3.4102  Val=3.3441  LR=4.22e-05
+>>> Epoch 13/20  Train=3.3672  Val=3.3444  LR=2.73e-05
+  [E15] Batch 1/17 | loss=3.3984 | temp=0.0700
+  [E15] Batch 11/17 | loss=3.3543 | temp=0.0700
+  [E15] Batch 17/17 | loss=3.4127 | temp=0.0700
+>>> Epoch 16/20  Train=3.3556  Val=3.3312  LR=9.55e-06
+  [Checkpoint] best val=3.3312 -> ./checkpoints/exp5_bert_mlp_only_best.pth
+  [E18] Batch 1/17 | loss=3.4074 | temp=0.0700
+  [E18] Batch 11/17 | loss=3.3806 | temp=0.0700
+  [E18] Batch 17/17 | loss=3.4439 | temp=0.0700
+  [E20] Batch 1/17 | loss=3.2368 | temp=0.0700
+  [E20] Batch 11/17 | loss=3.3108 | temp=0.0700
+  [E20] Batch 17/17 | loss=3.4638 | temp=0.0700
+>>> Epoch 20/20  Train=3.3493  Val=3.3361  LR=0.00e+00
+Training complete.
+=== Starting Experiment 6: MLP + Image Encoder (BERT) ===
+Text encoder: bert  max_seq_len: 128
+Using device: cuda
+Found 1 dataset(s) under: ./Dataset_BUSI_with_GT
+
+  Dataset_BUSI_with_GT                      ->  ./Dataset_BUSI_with_GT/all_captions.csv
+  [Dataset_BUSI_with_GT] 780 rows | path_col='image_path' | caption_col='text_caption' | label_col='label'
+
+================================================================================
+Dataset                                      Loaded   Failed  Status
+================================================================================
+Dataset_BUSI_with_GT                            780        -  OK
+================================================================================
+TOTAL                                           780        0
+
+Combined dataset: 780 samples from 1 source(s)
+Split sizes (total = 780)
+  Train :    545  (69.9%)
+  Val   :    118  (15.1%)
+  Test  :    117  (15.0%)
+DataLoaders ready:
+  Train :   17 batches  (545 samples)
+  Val   :    4 batches  (118 samples)
+  Test  :    4 batches  (117 samples)
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 44265.30it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: emilyalsentzer/Bio_ClinicalBERT
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  Trainable params: 125,730,041 / 234,040,313  (53.7%)
+Learning rate: 1e-05
+Training for 20 epochs...
+  [E1] Batch 1/17 | loss=3.5022 | temp=0.0700
+  [E1] Batch 11/17 | loss=3.4824 | temp=0.0700
+  [E1] Batch 17/17 | loss=3.4934 | temp=0.0700
+>>> Epoch  1/20  Train=3.4781  Val=3.3788  LR=9.94e-06
+  [Checkpoint] best val=3.3788 -> ./checkpoints/exp6_bert_mlp_image_best.pth
+  [E2] Batch 1/17 | loss=3.4815 | temp=0.0700
+  [E2] Batch 11/17 | loss=3.4640 | temp=0.0700
+  [E2] Batch 17/17 | loss=3.4661 | temp=0.0700
+>>> Epoch  2/20  Train=3.4661  Val=3.3735  LR=9.76e-06
+  [Checkpoint] best val=3.3735 -> ./checkpoints/exp6_bert_mlp_image_best.pth
+  [E3] Batch 1/17 | loss=3.4585 | temp=0.0700
+  [E3] Batch 11/17 | loss=3.4620 | temp=0.0700
+  [E3] Batch 17/17 | loss=3.4637 | temp=0.0700
+>>> Epoch  3/20  Train=3.4639  Val=3.3744  LR=9.46e-06
+  [E4] Batch 1/17 | loss=3.4641 | temp=0.0700
+  [E4] Batch 11/17 | loss=3.4700 | temp=0.0700
+  [E4] Batch 17/17 | loss=3.4811 | temp=0.0700
+>>> Epoch  4/20  Train=3.4606  Val=3.3717  LR=9.05e-06
+  [Checkpoint] best val=3.3717 -> ./checkpoints/exp6_bert_mlp_image_best.pth
+  [E5] Batch 1/17 | loss=3.4590 | temp=0.0700
+  [E5] Batch 11/17 | loss=3.4483 | temp=0.0700
+  [E5] Batch 17/17 | loss=3.4070 | temp=0.0700
+>>> Epoch  5/20  Train=3.4532  Val=3.3764  LR=8.54e-06
+  [E6] Batch 1/17 | loss=3.4494 | temp=0.0700
+  [E6] Batch 11/17 | loss=3.4880 | temp=0.0700
+  [E6] Batch 17/17 | loss=3.4357 | temp=0.0700
+>>> Epoch  6/20  Train=3.4589  Val=3.3712  LR=7.94e-06
+  [Checkpoint] best val=3.3712 -> ./checkpoints/exp6_bert_mlp_image_best.pth
+  [E7] Batch 1/17 | loss=3.4525 | temp=0.0700
+  [E7] Batch 11/17 | loss=3.4350 | temp=0.0700
+  [E7] Batch 17/17 | loss=3.4470 | temp=0.0700
+>>> Epoch  7/20  Train=3.4549  Val=3.3537  LR=7.27e-06
+  [Checkpoint] best val=3.3537 -> ./checkpoints/exp6_bert_mlp_image_best.pth
+  [E8] Batch 1/17 | loss=3.4268 | temp=0.0700
+  [E8] Batch 11/17 | loss=3.4640 | temp=0.0700
+  [E8] Batch 17/17 | loss=3.4864 | temp=0.0700
+>>> Epoch  8/20  Train=3.4444  Val=3.3656  LR=6.55e-06
+  [E9] Batch 1/17 | loss=3.4486 | temp=0.0700
+  [E9] Batch 11/17 | loss=3.4315 | temp=0.0700
+  [E9] Batch 17/17 | loss=3.4368 | temp=0.0700
+>>> Epoch  9/20  Train=3.4220  Val=3.4011  LR=5.78e-06
+  [E10] Batch 1/17 | loss=3.4007 | temp=0.0700
+  [E10] Batch 11/17 | loss=3.3927 | temp=0.0700
+  [E10] Batch 17/17 | loss=3.4066 | temp=0.0700
+>>> Epoch 10/20  Train=3.4261  Val=3.3604  LR=5.00e-06
+  [E11] Batch 1/17 | loss=3.4132 | temp=0.0700
+  [E11] Batch 11/17 | loss=3.3883 | temp=0.0700
+  [E11] Batch 17/17 | loss=3.3946 | temp=0.0700
+>>> Epoch 11/20  Train=3.4078  Val=3.3649  LR=4.22e-06
+  [E12] Batch 1/17 | loss=3.4323 | temp=0.0700
+  [E12] Batch 11/17 | loss=3.2943 | temp=0.0700
+  [E12] Batch 17/17 | loss=3.4416 | temp=0.0700
+>>> Epoch 12/20  Train=3.3890  Val=3.3639  LR=3.45e-06
+  [E13] Batch 1/17 | loss=3.4405 | temp=0.0700
+  [E13] Batch 11/17 | loss=3.3102 | temp=0.0700
+  [E13] Batch 17/17 | loss=3.4338 | temp=0.0700
+>>> Epoch 13/20  Train=3.3779  Val=3.3602  LR=2.73e-06
+  [E14] Batch 1/17 | loss=3.3376 | temp=0.0700
+  [E14] Batch 11/17 | loss=3.3607 | temp=0.0700
+  [E14] Batch 17/17 | loss=3.3118 | temp=0.0700
+>>> Epoch 14/20  Train=3.3699  Val=3.3545  LR=2.06e-06
+  [E15] Batch 1/17 | loss=3.2592 | temp=0.0700
+  [E15] Batch 11/17 | loss=3.3498 | temp=0.0700
+  [E15] Batch 17/17 | loss=3.3287 | temp=0.0700
+>>> Epoch 15/20  Train=3.3428  Val=3.3598  LR=1.46e-06
+  [E16] Batch 1/17 | loss=3.2706 | temp=0.0700
+  [E16] Batch 11/17 | loss=3.3830 | temp=0.0700
+  [E16] Batch 17/17 | loss=3.3355 | temp=0.0700
+>>> Epoch 16/20  Train=3.3285  Val=3.3516  LR=9.55e-07
+  [Checkpoint] best val=3.3516 -> ./checkpoints/exp6_bert_mlp_image_best.pth
+  [E17] Batch 1/17 | loss=3.2382 | temp=0.0700
+  [E17] Batch 11/17 | loss=3.3213 | temp=0.0700
+  [E17] Batch 17/17 | loss=3.3746 | temp=0.0700
+>>> Epoch 17/20  Train=3.3329  Val=3.3691  LR=5.45e-07
+  [E18] Batch 1/17 | loss=3.4010 | temp=0.0700
+  [E18] Batch 11/17 | loss=3.2897 | temp=0.0700
+  [E18] Batch 17/17 | loss=3.3762 | temp=0.0700
+>>> Epoch 18/20  Train=3.3276  Val=3.3508  LR=2.45e-07
+  [Checkpoint] best val=3.3508 -> ./checkpoints/exp6_bert_mlp_image_best.pth
+  [E19] Batch 1/17 | loss=3.3730 | temp=0.0700
+  [E19] Batch 11/17 | loss=3.3331 | temp=0.0700
+  [E19] Batch 17/17 | loss=3.2800 | temp=0.0700
+>>> Epoch 19/20  Train=3.3342  Val=3.3485  LR=6.16e-08
+  [Checkpoint] best val=3.3485 -> ./checkpoints/exp6_bert_mlp_image_best.pth
+  [E20] Batch 1/17 | loss=3.2224 | temp=0.0700
+  [E20] Batch 11/17 | loss=3.3282 | temp=0.0700
+  [E20] Batch 17/17 | loss=3.3236 | temp=0.0700
+>>> Epoch 20/20  Train=3.3269  Val=3.3478  LR=0.00e+00
+  [Checkpoint] best val=3.3478 -> ./checkpoints/exp6_bert_mlp_image_best.pth
+Training complete.
+=== Exp6 done at Sun Apr 26 15:40:09 UTC 2026 ===
+=== Starting Experiment 7: MLP + Text Encoder (BERT) ===
+Text encoder: bert  max_seq_len: 128
+Using device: cuda
+Found 1 dataset(s) under: ./Dataset_BUSI_with_GT
+
+  Dataset_BUSI_with_GT                      ->  ./Dataset_BUSI_with_GT/all_captions.csv
+  [Dataset_BUSI_with_GT] 780 rows | path_col='image_path' | caption_col='text_caption' | label_col='label'
+
+================================================================================
+Dataset                                      Loaded   Failed  Status
+================================================================================
+Dataset_BUSI_with_GT                            780        -  OK
+================================================================================
+TOTAL                                           780        0
+
+Combined dataset: 780 samples from 1 source(s)
+Split sizes (total = 780)
+  Train :    545  (69.9%)
+  Val   :    118  (15.1%)
+  Test  :    117  (15.0%)
+DataLoaders ready:
+  Train :   17 batches  (545 samples)
+  Val   :    4 batches  (118 samples)
+  Test  :    4 batches  (117 samples)
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 44754.24it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: emilyalsentzer/Bio_ClinicalBERT
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  Trainable params: 113,818,625 / 234,040,313  (48.6%)
+Learning rate: 0.0001
+Training for 20 epochs...
+  [E1] Batch 1/17 | loss=3.4966 | temp=0.0700
+  [E1] Batch 11/17 | loss=3.4925 | temp=0.0701
+  [E1] Batch 17/17 | loss=3.4652 | temp=0.0701
+>>> Epoch  1/20  Train=3.6386  Val=3.3734  LR=9.94e-05
+  [Checkpoint] best val=3.3734 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E2] Batch 1/17 | loss=3.4619 | temp=0.0701
+  [E2] Batch 11/17 | loss=3.4685 | temp=0.0701
+  [E2] Batch 17/17 | loss=3.4614 | temp=0.0701
+>>> Epoch  2/20  Train=3.4654  Val=3.3606  LR=9.76e-05
+  [Checkpoint] best val=3.3606 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E3] Batch 1/17 | loss=3.4511 | temp=0.0701
+  [E3] Batch 11/17 | loss=3.4880 | temp=0.0701
+  [E3] Batch 17/17 | loss=3.4426 | temp=0.0701
+>>> Epoch  3/20  Train=3.4433  Val=3.3391  LR=9.46e-05
+  [Checkpoint] best val=3.3391 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E4] Batch 1/17 | loss=3.3998 | temp=0.0701
+  [E4] Batch 11/17 | loss=3.3489 | temp=0.0701
+  [E4] Batch 17/17 | loss=3.3766 | temp=0.0701
+>>> Epoch  4/20  Train=3.3952  Val=3.2989  LR=9.05e-05
+  [Checkpoint] best val=3.2989 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E5] Batch 1/17 | loss=3.3625 | temp=0.0701
+  [E5] Batch 11/17 | loss=3.2550 | temp=0.0701
+  [E5] Batch 17/17 | loss=3.4615 | temp=0.0701
+>>> Epoch  5/20  Train=3.3616  Val=3.2800  LR=8.54e-05
+  [Checkpoint] best val=3.2800 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E6] Batch 1/17 | loss=3.1998 | temp=0.0701
+  [E6] Batch 11/17 | loss=3.5002 | temp=0.0701
+  [E6] Batch 17/17 | loss=3.2724 | temp=0.0701
+>>> Epoch  6/20  Train=3.3603  Val=3.2651  LR=7.94e-05
+  [Checkpoint] best val=3.2651 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E7] Batch 1/17 | loss=3.3226 | temp=0.0701
+  [E7] Batch 11/17 | loss=3.3401 | temp=0.0701
+  [E7] Batch 17/17 | loss=3.1471 | temp=0.0701
+>>> Epoch  7/20  Train=3.2814  Val=3.2463  LR=7.27e-05
+  [Checkpoint] best val=3.2463 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E8] Batch 1/17 | loss=3.2533 | temp=0.0701
+  [E8] Batch 11/17 | loss=3.2484 | temp=0.0701
+  [E8] Batch 17/17 | loss=3.3488 | temp=0.0701
+>>> Epoch  8/20  Train=3.2732  Val=3.2148  LR=6.55e-05
+  [Checkpoint] best val=3.2148 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E9] Batch 1/17 | loss=3.2724 | temp=0.0701
+  [E9] Batch 11/17 | loss=3.2239 | temp=0.0701
+  [E9] Batch 17/17 | loss=3.1571 | temp=0.0701
+>>> Epoch  9/20  Train=3.2488  Val=3.1854  LR=5.78e-05
+  [Checkpoint] best val=3.1854 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E10] Batch 1/17 | loss=3.1595 | temp=0.0701
+  [E10] Batch 11/17 | loss=3.4253 | temp=0.0701
+  [E10] Batch 17/17 | loss=3.1143 | temp=0.0701
+>>> Epoch 10/20  Train=3.2270  Val=3.2179  LR=5.00e-05
+  [E11] Batch 1/17 | loss=3.3061 | temp=0.0701
+  [E11] Batch 11/17 | loss=3.1971 | temp=0.0701
+  [E11] Batch 17/17 | loss=3.1453 | temp=0.0701
+>>> Epoch 11/20  Train=3.1962  Val=3.2441  LR=4.22e-05
+  [E12] Batch 1/17 | loss=3.2371 | temp=0.0701
+  [E12] Batch 11/17 | loss=3.1920 | temp=0.0701
+  [E12] Batch 17/17 | loss=3.0670 | temp=0.0701
+>>> Epoch 12/20  Train=3.1717  Val=3.1795  LR=3.45e-05
+  [Checkpoint] best val=3.1795 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E13] Batch 1/17 | loss=3.0360 | temp=0.0701
+  [E13] Batch 11/17 | loss=3.1358 | temp=0.0701
+  [E13] Batch 17/17 | loss=3.2612 | temp=0.0701
+>>> Epoch 13/20  Train=3.1746  Val=3.1703  LR=2.73e-05
+  [Checkpoint] best val=3.1703 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E14] Batch 1/17 | loss=3.0735 | temp=0.0701
+  [E14] Batch 11/17 | loss=3.0821 | temp=0.0701
+  [E14] Batch 17/17 | loss=3.1989 | temp=0.0701
+>>> Epoch 14/20  Train=3.1679  Val=3.1524  LR=2.06e-05
+  [Checkpoint] best val=3.1524 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E15] Batch 1/17 | loss=3.0996 | temp=0.0701
+  [E15] Batch 11/17 | loss=3.1419 | temp=0.0701
+  [E15] Batch 17/17 | loss=3.2602 | temp=0.0701
+>>> Epoch 15/20  Train=3.1583  Val=3.1502  LR=1.46e-05
+  [Checkpoint] best val=3.1502 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E16] Batch 1/17 | loss=3.0630 | temp=0.0701
+  [E16] Batch 11/17 | loss=3.2572 | temp=0.0701
+  [E16] Batch 17/17 | loss=3.1252 | temp=0.0701
+>>> Epoch 16/20  Train=3.1425  Val=3.1534  LR=9.55e-06
+  [E17] Batch 1/17 | loss=3.2749 | temp=0.0701
+  [E17] Batch 11/17 | loss=3.3006 | temp=0.0701
+  [E17] Batch 17/17 | loss=3.2428 | temp=0.0701
+>>> Epoch 17/20  Train=3.1609  Val=3.1552  LR=5.45e-06
+  [E18] Batch 1/17 | loss=3.1315 | temp=0.0701
+  [E18] Batch 11/17 | loss=3.0864 | temp=0.0701
+  [E18] Batch 17/17 | loss=3.1363 | temp=0.0701
+>>> Epoch 18/20  Train=3.1323  Val=3.1444  LR=2.45e-06
+  [Checkpoint] best val=3.1444 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E19] Batch 1/17 | loss=2.9906 | temp=0.0701
+  [E19] Batch 11/17 | loss=3.2867 | temp=0.0701
+  [E19] Batch 17/17 | loss=3.1723 | temp=0.0701
+>>> Epoch 19/20  Train=3.1328  Val=3.1380  LR=6.16e-07
+  [Checkpoint] best val=3.1380 -> ./checkpoints/exp7_bert_mlp_text_best.pth
+  [E20] Batch 1/17 | loss=3.1509 | temp=0.0701
+  [E20] Batch 11/17 | loss=3.3616 | temp=0.0701
+  [E20] Batch 17/17 | loss=3.1769 | temp=0.0701
+>>> Epoch 20/20  Train=3.1435  Val=3.1389  LR=0.00e+00
+Training complete.
+=== Exp7 done at Sun Apr 26 15:40:09 UTC 2026 ===
+=== Starting Experiment 8: MLP + Image & Text Encoder (BERT) ===
+Text encoder: bert  max_seq_len: 128
+Using device: cuda
+Found 1 dataset(s) under: ./Dataset_BUSI_with_GT
+
+  Dataset_BUSI_with_GT                      ->  ./Dataset_BUSI_with_GT/all_captions.csv
+  [Dataset_BUSI_with_GT] 780 rows | path_col='image_path' | caption_col='text_caption' | label_col='label'
+
+================================================================================
+Dataset                                      Loaded   Failed  Status
+================================================================================
+Dataset_BUSI_with_GT                            780        -  OK
+================================================================================
+TOTAL                                           780        0
+
+Combined dataset: 780 samples from 1 source(s)
+Split sizes (total = 780)
+  Train :    545  (69.9%)
+  Val   :    118  (15.1%)
+  Test  :    117  (15.0%)
+DataLoaders ready:
+  Train :   17 batches  (545 samples)
+  Val   :    4 batches  (118 samples)
+  Test  :    4 batches  (117 samples)
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 15223.08it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: emilyalsentzer/Bio_ClinicalBERT
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  Trainable params: 234,040,313 / 234,040,313  (100.0%)
+Learning rate: 1e-05
+Training for 20 epochs...
+  [E1] Batch 1/17 | loss=3.4904 | temp=0.0700
+  [E1] Batch 11/17 | loss=3.4755 | temp=0.0700
+  [E1] Batch 17/17 | loss=3.4734 | temp=0.0700
+>>> Epoch  1/20  Train=3.4709  Val=3.3676  LR=9.94e-06
+  [Checkpoint] best val=3.3676 -> ./checkpoints/exp8_bert_mlp_image_text_best.pth
+  [E2] Batch 1/17 | loss=3.4522 | temp=0.0700
+  [E2] Batch 11/17 | loss=3.4608 | temp=0.0700
+  [E2] Batch 17/17 | loss=3.4536 | temp=0.0700
+>>> Epoch  2/20  Train=3.4394  Val=3.3601  LR=9.76e-06
+  [Checkpoint] best val=3.3601 -> ./checkpoints/exp8_bert_mlp_image_text_best.pth
+  [E3] Batch 1/17 | loss=3.4774 | temp=0.0700
+  [E3] Batch 11/17 | loss=3.3982 | temp=0.0700
+  [E3] Batch 17/17 | loss=3.3943 | temp=0.0700
+>>> Epoch  3/20  Train=3.3959  Val=3.3348  LR=9.46e-06
+  [Checkpoint] best val=3.3348 -> ./checkpoints/exp8_bert_mlp_image_text_best.pth
+  [E4] Batch 1/17 | loss=3.3794 | temp=0.0700
+  [E4] Batch 11/17 | loss=3.3008 | temp=0.0700
+  [E4] Batch 17/17 | loss=3.3929 | temp=0.0700
+>>> Epoch  4/20  Train=3.3686  Val=3.3139  LR=9.05e-06
+  [Checkpoint] best val=3.3139 -> ./checkpoints/exp8_bert_mlp_image_text_best.pth
+  [E5] Batch 1/17 | loss=3.3170 | temp=0.0700
+  [E5] Batch 11/17 | loss=3.4371 | temp=0.0700
+  [E5] Batch 17/17 | loss=3.3285 | temp=0.0700
+>>> Epoch  5/20  Train=3.3332  Val=3.3261  LR=8.54e-06
+  [E6] Batch 1/17 | loss=3.2326 | temp=0.0700
+  [E6] Batch 11/17 | loss=3.3736 | temp=0.0700
+  [E6] Batch 17/17 | loss=3.1551 | temp=0.0700
+>>> Epoch  6/20  Train=3.2962  Val=3.2154  LR=7.94e-06
+  [Checkpoint] best val=3.2154 -> ./checkpoints/exp8_bert_mlp_image_text_best.pth
+  [E7] Batch 1/17 | loss=3.2329 | temp=0.0700
+  [E7] Batch 11/17 | loss=3.4513 | temp=0.0700
+  [E7] Batch 17/17 | loss=3.3840 | temp=0.0700
+>>> Epoch  7/20  Train=3.2669  Val=3.2190  LR=7.27e-06
+  [E8] Batch 1/17 | loss=3.1939 | temp=0.0700
+  [E8] Batch 11/17 | loss=3.0958 | temp=0.0700
+  [E8] Batch 17/17 | loss=3.4535 | temp=0.0700
+>>> Epoch  8/20  Train=3.2819  Val=3.3987  LR=6.55e-06
+  [E9] Batch 1/17 | loss=3.3114 | temp=0.0700
+  [E9] Batch 11/17 | loss=3.2847 | temp=0.0700
+  [E9] Batch 17/17 | loss=3.1230 | temp=0.0700
+>>> Epoch  9/20  Train=3.2427  Val=3.2552  LR=5.78e-06
+  [E10] Batch 1/17 | loss=3.1345 | temp=0.0700
+  [E10] Batch 11/17 | loss=3.3556 | temp=0.0700
+  [E10] Batch 17/17 | loss=3.2334 | temp=0.0700
+>>> Epoch 10/20  Train=3.2025  Val=3.2313  LR=5.00e-06
+  [E11] Batch 1/17 | loss=3.1869 | temp=0.0700
+  [E11] Batch 11/17 | loss=3.2345 | temp=0.0700
+  [E11] Batch 17/17 | loss=3.2175 | temp=0.0700
+>>> Epoch 11/20  Train=3.1804  Val=3.2245  LR=4.22e-06
+  [E12] Batch 1/17 | loss=3.0905 | temp=0.0700
+  [E12] Batch 11/17 | loss=3.1303 | temp=0.0700
+  [E12] Batch 17/17 | loss=3.1326 | temp=0.0700
+>>> Epoch 12/20  Train=3.1656  Val=3.1839  LR=3.45e-06
+  [Checkpoint] best val=3.1839 -> ./checkpoints/exp8_bert_mlp_image_text_best.pth
+  [E13] Batch 1/17 | loss=3.0263 | temp=0.0700
+  [E13] Batch 11/17 | loss=2.9305 | temp=0.0700
+  [E13] Batch 17/17 | loss=3.0685 | temp=0.0700
+>>> Epoch 13/20  Train=3.1172  Val=3.2477  LR=2.73e-06
+  [E14] Batch 1/17 | loss=3.2623 | temp=0.0700
+  [E14] Batch 11/17 | loss=3.2538 | temp=0.0700
+  [E14] Batch 17/17 | loss=2.9961 | temp=0.0700
+>>> Epoch 14/20  Train=3.1376  Val=3.1896  LR=2.06e-06
+  [E15] Batch 1/17 | loss=3.0590 | temp=0.0700
+  [E15] Batch 11/17 | loss=3.0825 | temp=0.0700
+  [E15] Batch 17/17 | loss=3.0984 | temp=0.0700
+>>> Epoch 15/20  Train=3.0776  Val=3.1845  LR=1.46e-06
+  [E16] Batch 1/17 | loss=3.0176 | temp=0.0700
+  [E16] Batch 11/17 | loss=3.0241 | temp=0.0700
+  [E16] Batch 17/17 | loss=3.0149 | temp=0.0700
+>>> Epoch 16/20  Train=3.0372  Val=3.2383  LR=9.55e-07
+  [E17] Batch 1/17 | loss=2.9166 | temp=0.0700
+  [E17] Batch 11/17 | loss=3.0671 | temp=0.0700
+  [E17] Batch 17/17 | loss=2.8882 | temp=0.0700
+>>> Epoch 17/20  Train=3.0319  Val=3.2551  LR=5.45e-07
+  [E18] Batch 1/17 | loss=3.0455 | temp=0.0700
+  [E18] Batch 11/17 | loss=2.9519 | temp=0.0700
+  [E18] Batch 17/17 | loss=2.9372 | temp=0.0700
+>>> Epoch 18/20  Train=3.0090  Val=3.2810  LR=2.45e-07
+  [E19] Batch 1/17 | loss=2.9754 | temp=0.0700
+  [E19] Batch 11/17 | loss=2.9784 | temp=0.0700
+  [E19] Batch 17/17 | loss=3.0076 | temp=0.0700
+>>> Epoch 19/20  Train=3.0170  Val=3.2603  LR=6.16e-08
+  [E20] Batch 1/17 | loss=2.8886 | temp=0.0700
+  [E20] Batch 11/17 | loss=2.8797 | temp=0.0700
+  [E20] Batch 17/17 | loss=2.9939 | temp=0.0700
+>>> Epoch 20/20  Train=2.9751  Val=3.2774  LR=0.00e+00
+Training complete.
+=== ALL DONE at Sun Apr 26 15:40:09 UTC 2026 ===
+Using device: cuda
+Found 1 dataset(s) under: ./Dataset_BUSI_with_GT
+
+  Dataset_BUSI_with_GT                      ->  ./Dataset_BUSI_with_GT/all_captions.csv
+  [Dataset_BUSI_with_GT] 780 rows | path_col='image_path' | caption_col='text_caption' | label_col='label'
+
+================================================================================
+Dataset                                      Loaded   Failed  Status
+================================================================================
+Dataset_BUSI_with_GT                            780        -  OK
+================================================================================
+TOTAL                                           780        0
+
+Combined dataset: 780 samples from 1 source(s)
+Split sizes (total = 780)
+  Train :    545  (69.9%)
+  Val   :    118  (15.1%)
+  Test  :    117  (15.0%)
+Labeled split sizes — train: 545  val: 118  test: 117
+
+============================================================
+Exp 1: MLP heads only (CLIP)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+  Trainable params: 5,114,881 / 188,502,521  (2.7%)
+  [compat] Remapped CLIP text_model keys (transformers <5.x checkpoint)
+Loaded trained weights from: ./checkpoints/echocare_clip_mlp_heads_only.pt
+
+--- Alignment Score ---
+  Paired:     0.5854
+  Cross-pair: 0.5598
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.4615
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0171  T2I R@1: 0.0000
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.700855 0.824144     0.707167      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.824144  0.700855     0.707167
+weighted_by_test_n         1 0.824144  0.700855     0.707167
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.573195   0.092803       0.478632          0.481287
+         0.05    0.648677   0.044790       0.557265          0.566409
+         0.10    0.696525   0.012717       0.570940          0.574963
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.710454   0.009211       0.535613          0.547355
+        0.010    0.710360   0.000799       0.666667          0.653933
+        0.020    0.712559   0.003607       0.678063          0.657124
+        0.050    0.713339   0.003958       0.655271          0.637632
+        0.100    0.709578   0.001872       0.672365          0.637631
+        0.150    0.710204   0.007067       0.680912          0.643643
+        0.200    0.716216   0.015981       0.683761          0.637576
+        0.300    0.724397   0.008791       0.683761          0.642546
+
+============================================================
+Exp 2: MLP + Image Encoder (CLIP)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+  Trainable params: 5,114,881 / 188,502,521  (2.7%)
+  [compat] Remapped CLIP text_model keys (transformers <5.x checkpoint)
+Loaded trained weights from: ./checkpoints/echocare_clip_mlp_and_image_encoder.pt
+
+--- Alignment Score ---
+  Paired:     0.6856
+  Cross-pair: 0.6664
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.5128
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0171  T2I R@1: 0.0085
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.606838 0.734219     0.634649      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.734219  0.606838     0.634649
+weighted_by_test_n         1 0.734219  0.606838     0.634649
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.615572   0.063942       0.505983          0.534635
+         0.05    0.680434   0.021020       0.535043          0.550720
+         0.10    0.701640   0.035215       0.562393          0.579945
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.701606   0.005567       0.618234          0.614076
+        0.010    0.703736   0.004424       0.641026          0.604320
+        0.020    0.713259   0.003388       0.672365          0.613129
+        0.050    0.714171   0.003800       0.666667          0.609497
+        0.100    0.717762   0.002933       0.675214          0.610954
+        0.150    0.719354   0.008360       0.672365          0.611638
+        0.200    0.728161   0.015660       0.678063          0.617000
+        0.300    0.736365   0.013951       0.680912          0.614961
+
+============================================================
+Exp 3: MLP + Text Encoder (CLIP)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+  Trainable params: 5,114,881 / 188,502,521  (2.7%)
+  [compat] Remapped CLIP text_model keys (transformers <5.x checkpoint)
+Loaded trained weights from: ./checkpoints/echocare_clip_mlp_and_text_encoder.pt
+
+--- Alignment Score ---
+  Paired:     0.6796
+  Cross-pair: 0.6524
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.5385
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0342  T2I R@1: 0.0171
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.666667 0.825763     0.676455      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.825763  0.666667     0.676455
+weighted_by_test_n         1 0.825763  0.666667     0.676455
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.599458   0.069014       0.516239          0.522056
+         0.05    0.697360   0.036091       0.584615          0.591463
+         0.10    0.706762   0.013219       0.593162          0.600534
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.769527   0.005815       0.586895          0.606057
+        0.010    0.760788   0.012244       0.689459          0.684590
+        0.020    0.764328   0.005701       0.720798          0.699097
+        0.050    0.765567   0.004593       0.715100          0.697652
+        0.100    0.765765   0.007283       0.732194          0.701603
+        0.150    0.767819   0.009867       0.720798          0.697644
+        0.200    0.766901   0.012963       0.712251          0.685507
+        0.300    0.771334   0.010369       0.717949          0.696221
+
+============================================================
+Exp 4: MLP + Image & Text Encoder (CLIP)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+  Trainable params: 5,114,881 / 188,502,521  (2.7%)
+  [compat] Remapped CLIP text_model keys (transformers <5.x checkpoint)
+Loaded trained weights from: ./checkpoints/echocare_clip_mlp_image_and_text_encoder.pt
+
+--- Alignment Score ---
+  Paired:     0.5003
+  Cross-pair: 0.5002
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.2564
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0085  T2I R@1: 0.0085
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.555556 0.730959     0.571233      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.730959  0.555556     0.571233
+weighted_by_test_n         1 0.730959  0.555556     0.571233
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.505670   0.069422       0.413675          0.423914
+         0.05    0.571977   0.010292       0.449573          0.466701
+         0.10    0.591051   0.027414       0.452991          0.474065
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.447820   0.001505       0.219373          0.215359
+        0.010    0.455328   0.004949       0.276353          0.291427
+        0.020    0.453103   0.000982       0.284900          0.307995
+        0.050    0.465863   0.011553       0.527066          0.474297
+        0.100    0.485033   0.015892       0.581197          0.470755
+        0.150    0.475095   0.014112       0.532764          0.467664
+        0.200    0.471197   0.017866       0.541311          0.478747
+        0.300    0.484913   0.003428       0.589744          0.471906
+
+============================================================
+Exp 5: MLP heads only (BERT)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+  Trainable params: 5,508,353 / 234,040,313  (2.4%)
+Loaded trained weights from: ./checkpoints/exp5_bert_mlp_only_best.pth
+
+--- Alignment Score ---
+  Paired:     0.1341
+  Cross-pair: 0.1283
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.5214
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0171  T2I R@1: 0.0085
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.726496 0.877093     0.727073      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.877093  0.726496     0.727073
+weighted_by_test_n         1 0.877093  0.726496     0.727073
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.588798   0.074724       0.482051          0.490987
+         0.05    0.673503   0.048425       0.570940          0.570691
+         0.10    0.669887   0.033450       0.540171          0.546343
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.702652   0.009274       0.484330          0.494087
+        0.010    0.713298   0.020226       0.552707          0.554199
+        0.020    0.719729   0.002184       0.606838          0.587849
+        0.050    0.713392   0.008018       0.609687          0.594702
+        0.100    0.724667   0.002077       0.638177          0.614103
+        0.150    0.730963   0.003528       0.655271          0.625905
+        0.200    0.721783   0.004746       0.618234          0.593013
+        0.300    0.725253   0.008834       0.641026          0.621273
+
+============================================================
+Exp 6: MLP + Image Encoder (BERT)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+  Trainable params: 5,508,353 / 234,040,313  (2.4%)
+Loaded trained weights from: ./checkpoints/exp6_bert_mlp_image_best.pth
+
+--- Alignment Score ---
+  Paired:     0.0332
+  Cross-pair: 0.0302
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.5556
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0085  T2I R@1: 0.0085
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.726496 0.805832     0.725034      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.805832  0.726496     0.725034
+weighted_by_test_n         1 0.805832  0.726496     0.725034
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.632924   0.088142       0.505983          0.497240
+         0.05    0.700118   0.038639       0.577778          0.580278
+         0.10    0.704308   0.034966       0.594872          0.593498
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.703126   0.012212       0.601140          0.601480
+        0.010    0.702545   0.009002       0.592593          0.585802
+        0.020    0.704342   0.018057       0.612536          0.604132
+        0.050    0.709497   0.011324       0.638177          0.619529
+        0.100    0.706168   0.011344       0.663818          0.640885
+        0.150    0.704947   0.017526       0.589744          0.590973
+        0.200    0.718659   0.005106       0.666667          0.637829
+        0.300    0.717069   0.006977       0.641026          0.619309
+
+============================================================
+Exp 7: MLP + Text Encoder (BERT)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+  Trainable params: 5,508,353 / 234,040,313  (2.4%)
+Loaded trained weights from: ./checkpoints/exp7_bert_mlp_text_best.pth
+
+--- Alignment Score ---
+  Paired:     0.0941
+  Cross-pair: 0.0616
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.6496
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0085  T2I R@1: 0.0171
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy   auroc  f1_weighted  n_train  n_eval
+breast  0.726496 0.87823     0.735355      545     117
+      average_type  n_organs   auroc  accuracy  f1_weighted
+             macro         1 0.87823  0.726496     0.735355
+weighted_by_test_n         1 0.87823  0.726496     0.735355
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.659045   0.076589       0.519658          0.525033
+         0.05    0.743857   0.015437       0.629060          0.631811
+         0.10    0.736715   0.032275       0.623932          0.628764
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.779413   0.010377       0.641026          0.642181
+        0.010    0.782607   0.006222       0.675214          0.648958
+        0.020    0.782580   0.005291       0.678063          0.660347
+        0.050    0.777489   0.014277       0.686610          0.655439
+        0.100    0.780321   0.002995       0.689459          0.654270
+        0.150    0.779588   0.006962       0.680912          0.656787
+        0.200    0.767420   0.007004       0.678063          0.654795
+        0.300    0.776497   0.008850       0.672365          0.645406
+
+============================================================
+Exp 8: MLP + Image & Text Encoder (BERT)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+  Trainable params: 5,508,353 / 234,040,313  (2.4%)
+Loaded trained weights from: ./checkpoints/exp8_bert_mlp_image_text_best.pth
+
+--- Alignment Score ---
+  Paired:     0.1236
+  Cross-pair: 0.0783
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.5897
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0085  T2I R@1: 0.0085
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.623932 0.798941     0.642726      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.798941  0.623932     0.642726
+weighted_by_test_n         1 0.798941  0.623932     0.642726
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.726724   0.049533       0.569231          0.588815
+         0.05    0.774159   0.025671       0.675214          0.678608
+         0.10    0.767082   0.027285       0.635897          0.647892
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.779795   0.008376       0.603989          0.616166
+        0.010    0.780677   0.009562       0.649573          0.634828
+        0.020    0.778970   0.011775       0.720798          0.686187
+        0.050    0.778482   0.009519       0.740741          0.696239
+        0.100    0.779871   0.001366       0.749288          0.703717
+        0.150    0.775492   0.011748       0.740741          0.681930
+        0.200    0.783475   0.002955       0.763533          0.710140
+        0.300    0.784252   0.010851       0.754986          0.705715
+
+===========================================================================
+SUMMARY
+===========================================================================
+Exp        |  Align | ZS Acc | I2T R@1 | LP AUC | LP Acc
+--------------------------------------------------------
+Exp 1      |  0.585 |  0.462 |   0.017 |  0.824 |  0.701
+Exp 2      |  0.686 |  0.513 |   0.017 |  0.734 |  0.607
+Exp 3      |  0.680 |  0.538 |   0.034 |  0.826 |  0.667
+Exp 4      |  0.500 |  0.256 |   0.009 |  0.731 |  0.556
+Exp 5      |  0.134 |  0.521 |   0.017 |  0.877 |  0.726
+Exp 6      |  0.033 |  0.556 |   0.009 |  0.806 |  0.726
+Exp 7      |  0.094 |  0.650 |   0.009 |  0.878 |  0.726
+Exp 8      |  0.124 |  0.590 |   0.009 |  0.799 |  0.624
+
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 196/196 [00:00<00:00, 47344.14it/s]
+[transformers] [1mCLIPTextModel LOAD REPORT[0m from: openai/clip-vit-base-patch32
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 196/196 [00:00<00:00, 24692.39it/s]
+[transformers] [1mCLIPTextModel LOAD REPORT[0m from: openai/clip-vit-base-patch32
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 196/196 [00:00<00:00, 20299.86it/s]
+[transformers] [1mCLIPTextModel LOAD REPORT[0m from: openai/clip-vit-base-patch32
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 196/196 [00:00<00:00, 26615.84it/s]
+[transformers] [1mCLIPTextModel LOAD REPORT[0m from: openai/clip-vit-base-patch32
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 36733.85it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: emilyalsentzer/Bio_ClinicalBERT
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 31214.15it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: emilyalsentzer/Bio_ClinicalBERT
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 41509.18it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: emilyalsentzer/Bio_ClinicalBERT
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 15347.65it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: emilyalsentzer/Bio_ClinicalBERT
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.

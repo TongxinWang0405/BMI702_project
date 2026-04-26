@@ -1,0 +1,2 @@
+accuracy,f1_weighted,auroc,organ,n_train,n_eval,n_classes,best_c
+0.7264957264957265,0.7270725664685858,0.8770925943696987,breast,545,117,3,1.0

@@ -1,0 +1,781 @@
+image_path,text_caption,label
+benign/benign (1).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (10).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (100).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (101).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (102).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (103).png,Sonographic appearance of benign breast.,benign
+benign/benign (104).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (105).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (106).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (107).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (108).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (109).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (11).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (110).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (111).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (112).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (113).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (114).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (115).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (116).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (117).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (118).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (119).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (12).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (120).png,Sonographic appearance of benign breast.,benign
+benign/benign (121).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (122).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (123).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (124).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (125).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (126).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (127).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (128).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (129).png,Sonographic appearance of benign breast.,benign
+benign/benign (13).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (130).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (131).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (132).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (133).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (134).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (135).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (136).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (137).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (138).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (139).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (14).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (140).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (141).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (142).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (143).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (144).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (145).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (146).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (147).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (148).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (149).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (15).png,Sonographic appearance of benign breast.,benign
+benign/benign (150).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (151).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (152).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (153).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (154).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (155).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (156).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (157).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (158).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (159).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (16).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (160).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (161).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (162).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (163).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (164).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (165).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (166).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (167).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (168).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (169).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (17).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (170).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (171).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (172).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (173).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (174).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (175).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (176).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (177).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (178).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (179).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (18).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (180).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (181).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (182).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (183).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (184).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (185).png,Sonographic appearance of benign breast.,benign
+benign/benign (186).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (187).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (188).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (189).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (19).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (190).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (191).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (192).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (193).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (194).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (195).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (196).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (197).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (198).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (199).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (2).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (20).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (200).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (201).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (202).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (203).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (204).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (205).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (206).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (207).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (208).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (209).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (21).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (210).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (211).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (212).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (213).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (214).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (215).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (216).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (217).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (218).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (219).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (22).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (220).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (221).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (222).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (223).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (224).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (225).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (226).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (227).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (228).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (229).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (23).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (230).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (231).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (232).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (233).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (234).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (235).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (236).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (237).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (238).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (239).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (24).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (240).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (241).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (242).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (243).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (244).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (245).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (246).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (247).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (248).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (249).png,Sonographic appearance of benign breast.,benign
+benign/benign (25).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (250).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (251).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (252).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (253).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (254).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (255).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (256).png,Sonographic appearance of benign breast.,benign
+benign/benign (257).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (258).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (259).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (26).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (260).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (261).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (262).png,Sonographic appearance of benign breast.,benign
+benign/benign (263).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (264).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (265).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (266).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (267).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (268).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (269).png,Sonographic appearance of benign breast.,benign
+benign/benign (27).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (270).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (271).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (272).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (273).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (274).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (275).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (276).png,Sonographic appearance of benign breast.,benign
+benign/benign (277).png,Sonographic appearance of benign breast.,benign
+benign/benign (278).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (279).png,Sonographic appearance of benign breast.,benign
+benign/benign (28).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (280).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (281).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (282).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (283).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (284).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (285).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (286).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (287).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (288).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (289).png,Sonographic appearance of benign breast.,benign
+benign/benign (29).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (290).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (291).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (292).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (293).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (294).png,Sonographic appearance of benign breast.,benign
+benign/benign (295).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (296).png,Sonographic appearance of benign breast.,benign
+benign/benign (297).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (298).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (299).png,Sonographic appearance of benign breast.,benign
+benign/benign (3).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (30).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (300).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (301).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (302).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (303).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (304).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (305).png,Sonographic appearance of benign breast.,benign
+benign/benign (306).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (307).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (308).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (309).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (31).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (310).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (311).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (312).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (313).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (314).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (315).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (316).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (317).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (318).png,Sonographic appearance of benign breast.,benign
+benign/benign (319).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (32).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (320).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (321).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (322).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (323).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (324).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (325).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (326).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (327).png,Sonographic appearance of benign breast.,benign
+benign/benign (328).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (329).png,Sonographic appearance of benign breast.,benign
+benign/benign (33).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (330).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (331).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (332).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (333).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (334).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (335).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (336).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (337).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (338).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (339).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (34).png,Sonographic appearance of benign breast.,benign
+benign/benign (340).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (341).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (342).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (343).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (344).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (345).png,Sonographic appearance of benign breast.,benign
+benign/benign (346).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (347).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (348).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (349).png,Sonographic appearance of benign breast.,benign
+benign/benign (35).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (350).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (351).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (352).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (353).png,Sonographic appearance of benign breast.,benign
+benign/benign (354).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (355).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (356).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (357).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (358).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (359).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (36).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (360).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (361).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (362).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (363).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (364).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (365).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (366).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (367).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (368).png,Sonographic appearance of benign breast.,benign
+benign/benign (369).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (37).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (370).png,Sonographic appearance of benign breast.,benign
+benign/benign (371).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (372).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (373).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (374).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (375).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (376).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (377).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (378).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (379).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (38).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (380).png,Sonographic appearance of benign breast.,benign
+benign/benign (381).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (382).png,Sonographic appearance of benign breast.,benign
+benign/benign (383).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (384).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (385).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (386).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (387).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (388).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (389).png,Sonographic appearance of benign breast.,benign
+benign/benign (39).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (390).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (391).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (392).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (393).png,Sonographic appearance of benign breast.,benign
+benign/benign (394).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (395).png,Sonographic appearance of benign breast.,benign
+benign/benign (396).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (397).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (398).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (399).png,Sonographic appearance of benign breast.,benign
+benign/benign (4).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (40).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (400).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (401).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (402).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (403).png,Sonographic appearance of benign breast.,benign
+benign/benign (404).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (405).png,Sonographic appearance of benign breast.,benign
+benign/benign (406).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (407).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (408).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (409).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (41).png,Sonographic appearance of benign breast.,benign
+benign/benign (410).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (411).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (412).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (413).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (414).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (415).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (416).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (417).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (418).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (419).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (42).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (420).png,Sonographic appearance of benign breast.,benign
+benign/benign (421).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (422).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (423).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (424).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (425).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (426).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (427).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (428).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (429).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (43).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (430).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (431).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (432).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (433).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (434).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (435).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (436).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (437).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (44).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (45).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (46).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (47).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (48).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (49).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (5).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (50).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (51).png,Sonographic appearance of benign breast.,benign
+benign/benign (52).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (53).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (54).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (55).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (56).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (57).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (58).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (59).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (6).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (60).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (61).png,Sonographic appearance of benign breast.,benign
+benign/benign (62).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (63).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (64).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (65).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (66).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (67).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (68).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (69).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (7).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (70).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (71).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (72).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (73).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (74).png,Sonographic appearance of benign breast.,benign
+benign/benign (75).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (76).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+benign/benign (77).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (78).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (79).png,Sonographic appearance of benign breast.,benign
+benign/benign (8).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (80).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (81).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (82).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (83).png,Sonographic appearance of benign breast.,benign
+benign/benign (84).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (85).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (86).png,"A clinical ultrasound scan of breast, indicative of benign pathology.",benign
+benign/benign (87).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (88).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (89).png,Sonographic appearance of benign breast.,benign
+benign/benign (9).png,This sonogram of breast is consistent with a benign diagnosis.,benign
+benign/benign (90).png,This ultrasound demonstrates breast exhibiting features of benign.,benign
+benign/benign (91).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (92).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (93).png,"A B-mode ultrasound of breast, consistent with benign.",benign
+benign/benign (94).png,An ultrasound image of breast with benign findings.,benign
+benign/benign (95).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (96).png,Echographic findings of breast showing benign characteristics.,benign
+benign/benign (97).png,A grayscale ultrasound demonstrating benign changes in breast.,benign
+benign/benign (98).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of benign.",benign
+benign/benign (99).png,Ultrasound of breast presenting sonographic signs of benign.,benign
+malignant/malignant (1).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (10).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (100).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (101).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (102).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (103).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (104).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (105).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (106).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (107).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (108).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (109).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (11).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (110).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (111).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (112).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (113).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (114).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (115).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (116).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (117).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (118).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (119).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (12).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (120).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (121).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (122).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (123).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (124).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (125).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (126).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (127).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (128).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (129).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (13).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (130).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (131).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (132).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (133).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (134).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (135).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (136).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (137).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (138).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (139).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (14).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (140).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (141).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (142).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (143).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (144).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (145).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (146).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (147).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (148).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (149).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (15).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (150).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (151).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (152).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (153).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (154).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (155).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (156).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (157).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (158).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (159).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (16).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (160).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (161).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (162).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (163).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (164).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (165).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (166).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (167).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (168).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (169).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (17).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (170).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (171).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (172).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (173).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (174).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (175).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (176).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (177).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (178).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (179).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (18).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (180).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (181).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (182).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (183).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (184).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (185).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (186).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (187).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (188).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (189).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (19).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (190).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (191).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (192).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (193).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (194).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (195).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (196).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (197).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (198).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (199).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (2).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (20).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (200).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (201).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (202).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (203).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (204).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (205).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (206).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (207).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (208).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (209).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (21).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (210).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (22).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (23).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (24).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (25).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (26).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (27).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (28).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (29).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (3).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (30).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (31).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (32).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (33).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (34).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (35).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (36).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (37).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (38).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (39).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (4).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (40).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (41).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (42).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (43).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (44).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (45).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (46).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (47).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (48).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (49).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (5).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (50).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (51).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (52).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (53).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (54).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (55).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (56).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (57).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (58).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (59).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (6).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (60).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (61).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (62).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (63).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (64).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (65).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (66).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (67).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (68).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (69).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (7).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (70).png,"A B-mode ultrasound of breast, consistent with malignant.",malignant
+malignant/malignant (71).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (72).png,"A clinical ultrasound scan of breast, indicative of malignant pathology.",malignant
+malignant/malignant (73).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (74).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (75).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (76).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (77).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (78).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (79).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (8).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (80).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (81).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (82).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (83).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (84).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (85).png,This sonogram of breast is consistent with a malignant diagnosis.,malignant
+malignant/malignant (86).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (87).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (88).png,A grayscale ultrasound demonstrating malignant changes in breast.,malignant
+malignant/malignant (89).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (9).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (90).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (91).png,This ultrasound demonstrates breast exhibiting features of malignant.,malignant
+malignant/malignant (92).png,An ultrasound image of breast with malignant findings.,malignant
+malignant/malignant (93).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (94).png,Echographic findings of breast showing malignant characteristics.,malignant
+malignant/malignant (95).png,Sonographic appearance of malignant breast.,malignant
+malignant/malignant (96).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (97).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of malignant.",malignant
+malignant/malignant (98).png,Ultrasound of breast presenting sonographic signs of malignant.,malignant
+malignant/malignant (99).png,Sonographic appearance of malignant breast.,malignant
+normal/normal (1).png,This sonogram of breast is consistent with a normal diagnosis.,normal
+normal/normal (10).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (100).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (101).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (102).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (103).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (104).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (105).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (106).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (107).png,An ultrasound image of breast with normal findings.,normal
+normal/normal (108).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (109).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (11).png,Sonographic appearance of normal breast.,normal
+normal/normal (110).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (111).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (112).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (113).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (114).png,Sonographic appearance of normal breast.,normal
+normal/normal (115).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (116).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (117).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (118).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (119).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (12).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (120).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (121).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (122).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (123).png,An ultrasound image of breast with normal findings.,normal
+normal/normal (124).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (125).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (126).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (127).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (128).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (129).png,Sonographic appearance of normal breast.,normal
+normal/normal (13).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (130).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (131).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (132).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (133).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (14).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (15).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (16).png,Sonographic appearance of normal breast.,normal
+normal/normal (17).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (18).png,This sonogram of breast is consistent with a normal diagnosis.,normal
+normal/normal (19).png,Sonographic appearance of normal breast.,normal
+normal/normal (2).png,An ultrasound image of breast with normal findings.,normal
+normal/normal (20).png,An ultrasound image of breast with normal findings.,normal
+normal/normal (21).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (22).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (23).png,An ultrasound image of breast with normal findings.,normal
+normal/normal (24).png,An ultrasound image of breast with normal findings.,normal
+normal/normal (25).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (26).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (27).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (28).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (29).png,This sonogram of breast is consistent with a normal diagnosis.,normal
+normal/normal (3).png,Sonographic appearance of normal breast.,normal
+normal/normal (30).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (31).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (32).png,Sonographic appearance of normal breast.,normal
+normal/normal (33).png,This sonogram of breast is consistent with a normal diagnosis.,normal
+normal/normal (34).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (35).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (36).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (37).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (38).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (39).png,This sonogram of breast is consistent with a normal diagnosis.,normal
+normal/normal (4).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (40).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (41).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (42).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (43).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (44).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (45).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (46).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (47).png,An ultrasound image of breast with normal findings.,normal
+normal/normal (48).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (49).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (5).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (50).png,An ultrasound image of breast with normal findings.,normal
+normal/normal (51).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (52).png,This sonogram of breast is consistent with a normal diagnosis.,normal
+normal/normal (53).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (54).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (55).png,This sonogram of breast is consistent with a normal diagnosis.,normal
+normal/normal (56).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (57).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (58).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (59).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (6).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (60).png,Sonographic appearance of normal breast.,normal
+normal/normal (61).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (62).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (63).png,This sonogram of breast is consistent with a normal diagnosis.,normal
+normal/normal (64).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (65).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (66).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (67).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (68).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (69).png,An ultrasound image of breast with normal findings.,normal
+normal/normal (7).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (70).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (71).png,Sonographic appearance of normal breast.,normal
+normal/normal (72).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (73).png,Sonographic appearance of normal breast.,normal
+normal/normal (74).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (75).png,Sonographic appearance of normal breast.,normal
+normal/normal (76).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (77).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (78).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (79).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (8).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (80).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (81).png,Ultrasound of breast presenting sonographic signs of normal.,normal
+normal/normal (82).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (83).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (84).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (85).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (86).png,This sonogram of breast is consistent with a normal diagnosis.,normal
+normal/normal (87).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (88).png,Sonographic appearance of normal breast.,normal
+normal/normal (89).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (9).png,"A B-mode ultrasound of breast, consistent with normal.",normal
+normal/normal (90).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (91).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (92).png,Sonographic appearance of normal breast.,normal
+normal/normal (93).png,This ultrasound demonstrates breast exhibiting features of normal.,normal
+normal/normal (94).png,"A clinical ultrasound scan of breast, indicative of normal pathology.",normal
+normal/normal (95).png,"A diagnostic ultrasound image of breast, with imaging features suggestive of normal.",normal
+normal/normal (96).png,Echographic findings of breast showing normal characteristics.,normal
+normal/normal (97).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (98).png,A grayscale ultrasound demonstrating normal changes in breast.,normal
+normal/normal (99).png,Echographic findings of breast showing normal characteristics.,normal

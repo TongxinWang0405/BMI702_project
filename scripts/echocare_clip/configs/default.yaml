@@ -1,0 +1,99 @@
+# ── Paths ──────────────────────────────────────────────────────────────────
+# Root folder containing the dataset (or one subfolder per dataset, each with a .csv)
+data_root: "./Dataset_BUSI_with_GT"
+
+# Directory to save/load model checkpoints
+model_dir: "./checkpoints"
+
+# Directory for evaluation outputs (CSV tables, plots)
+output_dir: "./results"
+
+# Optional: SwinTransformer pretrained weights for image encoder initialization
+# Set to null or remove if not available
+echocare_checkpoint: "./checkpoints/echocare_encoder.pth"
+
+# ── Image Settings ─────────────────────────────────────────────────────────
+image_size: 256
+in_channels: 3
+
+# Normalization statistics computed from training set
+# These are the updated values from the requirement
+img_mean: [0.190874, 0.192657, 0.196386]
+img_std:  [0.200044, 0.20141, 0.204307]
+
+# ── Model Architecture ─────────────────────────────────────────────────────
+feature_size: 128           # SwinTransformer base channel dim
+projection_dim: 256         # shared latent space dimension
+init_temperature: 0.07      # CLIP temperature init
+
+# CLIP text encoder
+clip_model_name: "openai/clip-vit-base-patch32"
+max_seq_len: 77
+
+# BERT text encoder (for Exp 5-8)
+bert_model_name: "emilyalsentzer/Bio_ClinicalBERT"
+bert_max_seq_len: 128
+
+# ── Baseline Models (for evaluation comparison) ───────────────────────────
+openai_clip_model_name: "openai/clip-vit-base-patch32"
+biomedclip_model_name: "hf-hub:microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224"
+
+# ── Data Splits ────────────────────────────────────────────────────────────
+test_size: 0.15
+val_size: 0.15
+random_seed: 42
+
+# ── Training ───────────────────────────────────────────────────────────────
+batch_size: 32
+num_epochs: 20
+lr: 1.0e-4
+weight_decay: 1.0e-4
+num_workers: 2
+
+# ── Experiment Definitions ─────────────────────────────────────────────────
+# Each experiment is defined by: text_encoder_type, freeze_image, freeze_text
+experiments:
+  1: { text_encoder: "clip", freeze_image: true,  freeze_text: true,  name: "MLP heads only (CLIP)" }
+  2: { text_encoder: "clip", freeze_image: false, freeze_text: true,  name: "MLP + Image Encoder (CLIP)" }
+  3: { text_encoder: "clip", freeze_image: true,  freeze_text: false, name: "MLP + Text Encoder (CLIP)" }
+  4: { text_encoder: "clip", freeze_image: false, freeze_text: false, name: "MLP + Image & Text Encoder (CLIP)" }
+  5: { text_encoder: "bert", freeze_image: true,  freeze_text: true,  name: "MLP heads only (BERT)" }
+  6: { text_encoder: "bert", freeze_image: false, freeze_text: true,  name: "MLP + Image Encoder (BERT)" }
+  7: { text_encoder: "bert", freeze_image: true,  freeze_text: false, name: "MLP + Text Encoder (BERT)" }
+  8: { text_encoder: "bert", freeze_image: false, freeze_text: false, name: "MLP + Image & Text Encoder (BERT)" }
+
+# Checkpoint file mapping (for evaluation)
+checkpoint_files:
+  1: "echocare_clip_mlp_heads_only.pt"
+  2: "echocare_clip_mlp_and_image_encoder.pt"
+  3: "echocare_clip_mlp_and_text_encoder.pt"
+  4: "echocare_clip_mlp_image_and_text_encoder.pt"
+  5: "exp5_bert_mlp_only_best.pth"
+  6: "exp6_bert_mlp_image_best.pth"
+  7: "exp7_bert_mlp_text_best.pth"
+  8: "exp8_bert_mlp_image_text_best.pth"
+
+# ── Evaluation Settings ────────────────────────────────────────────────────
+eval:
+  # Linear probe
+  linear_probe_c_grid: [0.01, 0.1, 1.0, 10.0]
+  probe_max_iter: 3000
+
+  # Few-shot (probe-based)
+  fewshot_fracs: [0.01, 0.05, 0.10]
+  fewshot_num_seeds: 5
+
+  # End-to-end few-shot
+  fewshot_e2e_fracs: [0.005, 0.01, 0.02, 0.05, 0.10, 0.15, 0.20, 0.30]
+  fewshot_e2e_num_seeds: 3
+  fewshot_e2e_epochs: 8
+  fewshot_e2e_batch_size: 16
+  fewshot_e2e_weight_decay: 1.0e-4
+  fewshot_e2e_grad_clip: 1.0
+  fewshot_e2e_lr:
+    trained: 1.0e-5
+    openai: 5.0e-6
+    biomedclip: 5.0e-6
+
+  # Retrieval
+  retrieval_ks: [1, 5, 10]

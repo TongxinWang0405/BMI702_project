@@ -1,0 +1,797 @@
+Using device: cuda
+Found 1 dataset(s) under: ./Dataset_BUSI_with_GT
+
+  Dataset_BUSI_with_GT                      ->  ./Dataset_BUSI_with_GT/all_captions.csv
+  [Dataset_BUSI_with_GT] 780 rows | path_col='image_path' | caption_col='text_caption' | label_col='label'
+
+================================================================================
+Dataset                                      Loaded   Failed  Status
+================================================================================
+Dataset_BUSI_with_GT                            780        -  OK
+================================================================================
+TOTAL                                           780        0
+
+Combined dataset: 780 samples from 1 source(s)
+Split sizes (total = 780)
+  Train :    545  (69.9%)
+  Val   :    118  (15.1%)
+  Test  :    117  (15.0%)
+Labeled split sizes — train: 545  val: 118  test: 117
+
+============================================================
+Exp 1: MLP heads only (CLIP)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 42776.75it/s]
+[transformers] [1mCLIPTextModel LOAD REPORT[0m from: openai/clip-vit-base-patch32
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  Trainable params: 5,114,881 / 188,502,521  (2.7%)
+  [compat] Remapped CLIP text_model keys (transformers <5.x checkpoint)
+Loaded trained weights from: ./checkpoints/echocare_clip_mlp_heads_only.pt
+
+--- Alignment Score ---
+  Paired:     0.5854
+  Cross-pair: 0.5598
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.4615
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0171  T2I R@1: 0.0000
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.700855 0.824144     0.707167      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.824144  0.700855     0.707167
+weighted_by_test_n         1 0.824144  0.700855     0.707167
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.573195   0.092803       0.478632          0.481287
+         0.05    0.648677   0.044790       0.557265          0.566409
+         0.10    0.696525   0.012717       0.570940          0.574963
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.710454   0.009211       0.535613          0.547355
+        0.010    0.710360   0.000799       0.666667          0.653933
+        0.020    0.712559   0.003607       0.678063          0.657124
+        0.050    0.713339   0.003958       0.655271          0.637632
+        0.100    0.709578   0.001872       0.672365          0.637631
+        0.150    0.710204   0.007067       0.680912          0.643643
+        0.200    0.716216   0.015981       0.683761          0.637576
+        0.300    0.724397   0.008791       0.683761          0.642546
+
+============================================================
+Exp 2: MLP + Image Encoder (CLIP)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 22693.82it/s]
+[transformers] [1mCLIPTextModel LOAD REPORT[0m from: openai/clip-vit-base-patch32
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  Trainable params: 5,114,881 / 188,502,521  (2.7%)
+  [compat] Remapped CLIP text_model keys (transformers <5.x checkpoint)
+Loaded trained weights from: ./checkpoints/echocare_clip_mlp_and_image_encoder.pt
+
+--- Alignment Score ---
+  Paired:     0.6856
+  Cross-pair: 0.6664
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.5128
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0171  T2I R@1: 0.0085
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.606838 0.734219     0.634649      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.734219  0.606838     0.634649
+weighted_by_test_n         1 0.734219  0.606838     0.634649
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.615572   0.063942       0.505983          0.534635
+         0.05    0.680434   0.021020       0.535043          0.550720
+         0.10    0.701640   0.035215       0.562393          0.579945
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.701606   0.005567       0.618234          0.614076
+        0.010    0.703736   0.004424       0.641026          0.604320
+        0.020    0.713259   0.003388       0.672365          0.613129
+        0.050    0.714171   0.003800       0.666667          0.609497
+        0.100    0.717762   0.002933       0.675214          0.610954
+        0.150    0.719354   0.008360       0.672365          0.611638
+        0.200    0.728161   0.015660       0.678063          0.617000
+        0.300    0.736365   0.013951       0.680912          0.614961
+
+============================================================
+Exp 3: MLP + Text Encoder (CLIP)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 37060.84it/s]
+[transformers] [1mCLIPTextModel LOAD REPORT[0m from: openai/clip-vit-base-patch32
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  Trainable params: 5,114,881 / 188,502,521  (2.7%)
+  [compat] Remapped CLIP text_model keys (transformers <5.x checkpoint)
+Loaded trained weights from: ./checkpoints/echocare_clip_mlp_and_text_encoder.pt
+
+--- Alignment Score ---
+  Paired:     0.6796
+  Cross-pair: 0.6524
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.5385
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0342  T2I R@1: 0.0171
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.666667 0.825763     0.676455      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.825763  0.666667     0.676455
+weighted_by_test_n         1 0.825763  0.666667     0.676455
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.599458   0.069014       0.516239          0.522056
+         0.05    0.697360   0.036091       0.584615          0.591463
+         0.10    0.706762   0.013219       0.593162          0.600534
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.769527   0.005815       0.586895          0.606057
+        0.010    0.760788   0.012244       0.689459          0.684590
+        0.020    0.764328   0.005701       0.720798          0.699097
+        0.050    0.765567   0.004593       0.715100          0.697652
+        0.100    0.765765   0.007283       0.732194          0.701603
+        0.150    0.767819   0.009867       0.720798          0.697644
+        0.200    0.766901   0.012963       0.712251          0.685507
+        0.300    0.771334   0.010369       0.717949          0.696221
+
+============================================================
+Exp 4: MLP + Image & Text Encoder (CLIP)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 18743.36it/s]
+[transformers] [1mCLIPTextModel LOAD REPORT[0m from: openai/clip-vit-base-patch32
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  Trainable params: 5,114,881 / 188,502,521  (2.7%)
+  [compat] Remapped CLIP text_model keys (transformers <5.x checkpoint)
+Loaded trained weights from: ./checkpoints/echocare_clip_mlp_image_and_text_encoder.pt
+
+--- Alignment Score ---
+  Paired:     0.5003
+  Cross-pair: 0.5002
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.2564
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0085  T2I R@1: 0.0085
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.555556 0.730959     0.571233      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.730959  0.555556     0.571233
+weighted_by_test_n         1 0.730959  0.555556     0.571233
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.505670   0.069422       0.413675          0.423914
+         0.05    0.571977   0.010292       0.449573          0.466701
+         0.10    0.591051   0.027414       0.452991          0.474065
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.447820   0.001505       0.219373          0.215359
+        0.010    0.455328   0.004949       0.276353          0.291427
+        0.020    0.453103   0.000982       0.284900          0.307995
+        0.050    0.465863   0.011553       0.527066          0.474297
+        0.100    0.485033   0.015892       0.581197          0.470755
+        0.150    0.475095   0.014112       0.532764          0.467664
+        0.200    0.471197   0.017866       0.541311          0.478747
+        0.300    0.484913   0.003428       0.589744          0.471906
+
+============================================================
+Exp 5: MLP heads only (BERT)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 17081.07it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: emilyalsentzer/Bio_ClinicalBERT
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  Trainable params: 5,508,353 / 234,040,313  (2.4%)
+Loaded trained weights from: ./checkpoints/exp5_bert_mlp_only_best.pth
+
+--- Alignment Score ---
+  Paired:     0.0426
+  Cross-pair: 0.0393
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.4957
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0000  T2I R@1: 0.0171
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.769231 0.868466      0.76911      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.868466  0.769231      0.76911
+weighted_by_test_n         1 0.868466  0.769231      0.76911
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.545195   0.079498       0.459829          0.464028
+         0.05    0.662957   0.040257       0.574359          0.575939
+         0.10    0.661859   0.032306       0.550427          0.556543
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.655092   0.008246       0.501425          0.513285
+        0.010    0.655706   0.010646       0.541311          0.547583
+        0.020    0.667700   0.014623       0.578348          0.569237
+        0.050    0.662877   0.014118       0.592593          0.579890
+        0.100    0.678571   0.011567       0.601140          0.590392
+        0.150    0.673291   0.003917       0.603989          0.584950
+        0.200    0.669365   0.013260       0.612536          0.589492
+        0.300    0.683373   0.011275       0.615385          0.592754
+
+============================================================
+Exp 6: MLP + Image Encoder (BERT)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 12286.07it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: emilyalsentzer/Bio_ClinicalBERT
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  Trainable params: 5,508,353 / 234,040,313  (2.4%)
+Loaded trained weights from: ./checkpoints/exp6_bert_mlp_image_best.pth
+
+--- Alignment Score ---
+  Paired:     -0.1899
+  Cross-pair: -0.1899
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.1368
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0085  T2I R@1: 0.0085
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.564103 0.689881     0.575893      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.689881  0.564103     0.575893
+weighted_by_test_n         1 0.689881  0.564103     0.575893
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.507358   0.034627       0.410256          0.423767
+         0.05    0.543015   0.070356       0.429060          0.442980
+         0.10    0.569145   0.044111       0.463248          0.474885
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.508485   0.004440       0.458689          0.324810
+        0.010    0.512228   0.000888       0.490028          0.420893
+        0.020    0.513392   0.000357       0.566952          0.461252
+        0.050    0.512622   0.001529       0.606838          0.458356
+        0.100    0.511597   0.001665       0.606838          0.458356
+        0.150    0.510384   0.001057       0.606838          0.458356
+        0.200    0.511492   0.000675       0.606838          0.458356
+        0.300    0.512410   0.000449       0.535613          0.429739
+
+============================================================
+Exp 7: MLP + Text Encoder (BERT)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 15282.45it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: emilyalsentzer/Bio_ClinicalBERT
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  Trainable params: 5,508,353 / 234,040,313  (2.4%)
+Loaded trained weights from: ./checkpoints/exp7_bert_mlp_text_best.pth
+
+--- Alignment Score ---
+  Paired:     0.1630
+  Cross-pair: 0.1388
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.5726
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0000  T2I R@1: 0.0256
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.709402 0.864984     0.712074      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.864984  0.709402     0.712074
+weighted_by_test_n         1 0.864984  0.709402     0.712074
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.676367   0.056028       0.543590          0.549795
+         0.05    0.730306   0.012897       0.623932          0.627305
+         0.10    0.708431   0.034021       0.593162          0.596969
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.749780   0.006594       0.592593          0.590640
+        0.010    0.750564   0.009499       0.666667          0.643076
+        0.020    0.752061   0.003135       0.678063          0.653137
+        0.050    0.749962   0.005226       0.672365          0.645146
+        0.100    0.746954   0.010183       0.692308          0.647048
+        0.150    0.752766   0.006592       0.692308          0.656778
+        0.200    0.748142   0.010643       0.689459          0.647221
+        0.300    0.758172   0.009772       0.686610          0.653036
+
+============================================================
+Exp 8: MLP + Image & Text Encoder (BERT)
+============================================================
+Loaded EchoCare pretrained weights from './checkpoints/echocare_encoder.pth'
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 11896.11it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: emilyalsentzer/Bio_ClinicalBERT
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  Trainable params: 5,508,353 / 234,040,313  (2.4%)
+Loaded trained weights from: ./checkpoints/exp8_bert_mlp_image_text_best.pth
+
+--- Alignment Score ---
+  Paired:     -0.1791
+  Cross-pair: -0.1781
+
+--- Zero-Shot Classification ---
+  Accuracy: 0.5128
+
+--- Retrieval Metrics ---
+  I2T R@1: 0.0000  T2I R@1: 0.0085
+
+--- Linear Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ organ  accuracy    auroc  f1_weighted  n_train  n_eval
+breast  0.606838 0.703077     0.621812      545     117
+      average_type  n_organs    auroc  accuracy  f1_weighted
+             macro         1 0.703077  0.606838     0.621812
+weighted_by_test_n         1 0.703077  0.606838     0.621812
+
+--- Few-Shot Probe ---
+  Extracting embeddings (train)…
+  Extracting embeddings (val)…
+  Extracting embeddings (test)…
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+         0.01    0.502211   0.082091       0.442735          0.456935
+         0.05    0.590397   0.038112       0.495726          0.513510
+         0.10    0.583573   0.032911       0.482051          0.502739
+
+--- Few-Shot E2E Fine-Tuning ---
+  [e2e] frac=0.005 seed=42 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=43 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.005 seed=44 organ=breast  n_support=6  n_test=117
+  [e2e] frac=0.010 seed=42 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=43 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.010 seed=44 organ=breast  n_support=8  n_test=117
+  [e2e] frac=0.020 seed=42 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=43 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.020 seed=44 organ=breast  n_support=12  n_test=117
+  [e2e] frac=0.050 seed=42 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=43 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.050 seed=44 organ=breast  n_support=29  n_test=117
+  [e2e] frac=0.100 seed=42 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=43 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.100 seed=44 organ=breast  n_support=56  n_test=117
+  [e2e] frac=0.150 seed=42 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=43 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.150 seed=44 organ=breast  n_support=83  n_test=117
+  [e2e] frac=0.200 seed=42 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=43 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.200 seed=44 organ=breast  n_support=110  n_test=117
+  [e2e] frac=0.300 seed=42 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=43 organ=breast  n_support=165  n_test=117
+  [e2e] frac=0.300 seed=44 organ=breast  n_support=165  n_test=117
+ fewshot_frac  auroc_mean  auroc_std  accuracy_mean  f1_weighted_mean
+        0.005    0.560328   0.012922       0.484330          0.480325
+        0.010    0.558403   0.005080       0.512821          0.488440
+        0.020    0.559089   0.002436       0.529915          0.504473
+        0.050    0.559988   0.008280       0.544160          0.503333
+        0.100    0.565168   0.018874       0.555556          0.502830
+        0.150    0.578161   0.000902       0.578348          0.471383
+        0.200    0.581330   0.003366       0.606838          0.458356
+        0.300    0.580051   0.009980       0.603989          0.482715
+
+===========================================================================
+SUMMARY
+===========================================================================
+Exp        |  Align | ZS Acc | I2T R@1 | LP AUC | LP Acc
+--------------------------------------------------------
+Exp 1      |  0.585 |  0.462 |   0.017 |  0.824 |  0.701
+Exp 2      |  0.686 |  0.513 |   0.017 |  0.734 |  0.607
+Exp 3      |  0.680 |  0.538 |   0.034 |  0.826 |  0.667
+Exp 4      |  0.500 |  0.256 |   0.009 |  0.731 |  0.556
+Exp 5      |  0.043 |  0.496 |   0.000 |  0.868 |  0.769
+Exp 6      | -0.190 |  0.137 |   0.009 |  0.690 |  0.564
+Exp 7      |  0.163 |  0.573 |   0.000 |  0.865 |  0.709
+Exp 8      | -0.179 |  0.513 |   0.000 |  0.703 |  0.607
