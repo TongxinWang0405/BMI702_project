@@ -2,3 +2,4 @@ echocare_encoder.pth
 dataset/
 .claude/
 echocare_clip_train.ipynb
+.DS_Store

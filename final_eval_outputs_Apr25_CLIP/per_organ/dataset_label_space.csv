@@ -1,0 +1,6 @@
+dataset,n_samples,labels,n_labels,task_type
+BrEaST-Lesions_USG-images_and_masks,37,"benign, malignant, normal",3,3-class
+Liver USData (with Chinese annotation),418,"<na>, normal",2,binary
+Lung_ultrasound,159,"covid, healthy, other",3,3-class
+Thyroid,344,"benign, malignant, normal",3,3-class
+Thyroid USData (with Chinese annotation),737,"<na>, normal",2,binary
