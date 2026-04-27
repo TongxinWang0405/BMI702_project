@@ -1,0 +1,5 @@
+organ,n_samples,labels,n_labels,task_type
+breast,37,"benign, malignant, normal",3,3-class
+liver,418,"<na>, normal",2,binary
+lung,159,"covid, healthy, other",3,3-class
+thyroid,1081,"<na>, benign, malignant, normal",4,4-class
