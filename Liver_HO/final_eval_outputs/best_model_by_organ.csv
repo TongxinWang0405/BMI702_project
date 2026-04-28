@@ -1,0 +1,2 @@
+organ,model,f1_weighted,auroc,accuracy
+liver,MLP + image encoder,0.7254312239068337,0.862931787005861,0.7207207207207207
