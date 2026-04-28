@@ -1,0 +1,68 @@
+python prepare_data.py 
+<frozen importlib._bootstrap_external>:1297: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+Found 8 dataset(s) under: /home/zhuoyangl/tryout/bmi702/data/data
+
+  BUS-Lesion                                ->  /home/zhuoyangl/tryout/bmi702/data/data/BUS-Lesion/bus_lesion_captions.csv
+  BrEaST-Lesions_USG-images_and_masks       ->  /home/zhuoyangl/tryout/bmi702/data/data/BrEaST-Lesions_USG-images_and_masks/captions.csv
+  Dataset_BUSI_with_GT                      ->  /home/zhuoyangl/tryout/bmi702/data/data/Dataset_BUSI_with_GT/all_captions.csv
+  Liver USData (with Chinese annotation)    ->  /home/zhuoyangl/tryout/bmi702/data/data/Liver USData (with Chinese annotation)/liver.csv
+  Liver_ultrasound                          ->  /home/zhuoyangl/tryout/bmi702/data/data/Liver_ultrasound/captions.csv
+  Lung_ultrasound                           ->  /home/zhuoyangl/tryout/bmi702/data/data/Lung_ultrasound/lung_captions.csv
+  Thyroid                                   ->  /home/zhuoyangl/tryout/bmi702/data/data/Thyroid/thyroid_template_captions_with_paths_v2.csv
+  Thyroid USData (with Chinese annotation)  ->  /home/zhuoyangl/tryout/bmi702/data/data/Thyroid USData (with Chinese annotation)/thyroid.csv
+  [BUS-Lesion] 5163 rows | path_col='file_name' | caption_col='caption'
+  [BrEaST-Lesions_USG-images_and_masks] 248 rows | path_col='image_path' | caption_col='text_caption'
+  [Dataset_BUSI_with_GT] 780 rows | path_col='image_path' | caption_col='text_caption'
+  [Liver USData (with Chinese annotation)] 2788 rows | path_col='image_path' | caption_col='annotation'
+  [Liver_ultrasound] 735 rows | path_col='file_name' | caption_col='caption'
+  [Lung_ultrasound] 1062 rows | path_col='file_name' | caption_col='caption'
+  [Thyroid] 2289 rows | path_col='file_name' | caption_col='caption'
+  [Thyroid USData (with Chinese annotation)] 4914 rows | path_col='image_path' | caption_col='annotation'
+
+========================================================================
+Dataset                                  Loaded   Failed  Status
+========================================================================
+BUS-Lesion                                5,163        -  OK
+BrEaST-Lesions_USG-images_and_masks         248        -  OK
+Dataset_BUSI_with_GT                        780        -  OK
+Liver USData (with Chinese annotation)    2,788        -  OK
+Liver_ultrasound                            735        -  OK
+Lung_ultrasound                           1,062        -  OK
+Thyroid                                   2,289        -  OK
+Thyroid USData (with Chinese annotation)    4,914        -  OK
+========================================================================
+TOTAL                                    17,979        0
+
+Combined dataset: 17,979 samples from 8 source(s)
+
+Per-dataset breakdown:
+  BUS-Lesion                                5,163  (28.7%)
+  Thyroid USData (with Chinese annotation)  4,914  (27.3%)
+  Liver USData (with Chinese annotation)    2,788  (15.5%)
+  Thyroid                                   2,289  (12.7%)
+  Lung_ultrasound                           1,062  (5.9%)
+  Dataset_BUSI_with_GT                        780  (4.3%)
+  Liver_ultrasound                            735  (4.1%)
+  BrEaST-Lesions_USG-images_and_masks         248  (1.4%)
+
+Holding out 2 dataset(s) from train/val/test:
+  - Dataset_BUSI_with_GT: 780 samples
+  - Liver_ultrasound: 735 samples
+
+Split sizes  (core = 16,464, held-out = 1,515)
+  Train   : 11,524  (70.0% of core)
+  Val     :  2,470  (15.0% of core)
+  Test    :  2,470  (15.0% of core)
+  HeldOut :  1,515
+Computing mean and std over 11,524 train images...
+  mean : [0.1909, 0.1927, 0.1964]
+  std  : [0.2, 0.2014, 0.2043]
+Updated normalization written to /home/zhuoyangl/tryout/bmi702/on_server_code/config.json
+  train   : 11,524 rows → /home/zhuoyangl/tryout/bmi702/data/data_split_temp/train_df.csv
+  val     :  2,470 rows → /home/zhuoyangl/tryout/bmi702/data/data_split_temp/val_df.csv
+  test    :  2,470 rows → /home/zhuoyangl/tryout/bmi702/data/data_split_temp/test_df.csv
+  full    : 16,464 rows → /home/zhuoyangl/tryout/bmi702/data/data_split_temp/full_df.csv
+  held_out:  1,515 rows → /home/zhuoyangl/tryout/bmi702/data/data_split_temp/held_out_df.csv
+
+Saved split metadata → /home/zhuoyangl/tryout/bmi702/data/data_split_temp/split_metadata.json
+All splits saved to: /home/zhuoyangl/tryout/bmi702/data/data_split_temp

@@ -51,9 +51,22 @@ def get_device() -> torch.device:
 class MultiDatasetUltrasound(Dataset):
     """Multi-source ultrasound dataset with free-text captions."""
 
-    def __init__(self, dataframe: pd.DataFrame, split: str, cfg: dict):
+    def __init__(self, dataframe: pd.DataFrame, split: str, cfg: dict,
+                 use_llm_caption: bool = False):
         self.df = dataframe.reset_index(drop=True)
         self.split = split
+        # If use_llm_caption=True, read from the `llm_caption` column
+        # written by generate_llm_captions.py; otherwise keep the
+        # original behavior (the `caption` column produced by
+        # prepare_data.py, which normalizes across source schemas).
+        self.caption_column = "llm_caption" if use_llm_caption else "caption"
+        if self.caption_column not in self.df.columns:
+            raise KeyError(
+                f"column {self.caption_column!r} not found "
+                f"(have: {list(self.df.columns)}). "
+                + ("Run generate_llm_captions.py first."
+                   if use_llm_caption else "")
+            )
 
         sz = cfg["image_encoder"]["image_size"]
         mean = cfg["normalization"]["img_mean"]
@@ -82,19 +95,20 @@ class MultiDatasetUltrasound(Dataset):
         row = self.df.iloc[idx]
         image = Image.open(row["image_path"]).convert("RGB")
         image = self.transform(image)
-        return image, row["caption"], row["dataset"]
+        return image, row[self.caption_column], row["dataset"]
 
 
-def build_dataloaders(cfg: dict, splits_dir: str | None = None):
+def build_dataloaders(cfg: dict, splits_dir: str | None = None,
+                      use_llm_caption: bool = False):
     """Load train/val/test parquets and return DataLoaders."""
     splits_dir = splits_dir or cfg["paths"]["data_split_dir"]
     train_df = pd.read_parquet(os.path.join(splits_dir, "train_df.parquet"))
     val_df = pd.read_parquet(os.path.join(splits_dir, "val_df.parquet"))
     test_df = pd.read_parquet(os.path.join(splits_dir, "test_df.parquet"))
 
-    train_ds = MultiDatasetUltrasound(train_df, "train", cfg)
-    val_ds = MultiDatasetUltrasound(val_df, "val", cfg)
-    test_ds = MultiDatasetUltrasound(test_df, "test", cfg)
+    train_ds = MultiDatasetUltrasound(train_df, "train", cfg, use_llm_caption)
+    val_ds = MultiDatasetUltrasound(val_df, "val", cfg, use_llm_caption)
+    test_ds = MultiDatasetUltrasound(test_df, "test", cfg, use_llm_caption)
 
     kw = dict(
         batch_size=cfg["training"]["batch_size"],
@@ -396,7 +410,12 @@ def run_experiment(exp_key: str, config_path: str | os.PathLike = DEFAULT_CONFIG
           flush=True)
 
     tokenizer = get_tokenizer(cfg, text_encoder_key=text_key)
-    train_loader, val_loader, test_loader = build_dataloaders(cfg)
+    use_llm = bool(exp.get("use_llm_caption", False))
+    if use_llm:
+        print("Training with LLM-generated captions (column: llm_caption)", flush=True)
+    train_loader, val_loader, test_loader = build_dataloaders(
+        cfg, use_llm_caption=use_llm,
+    )
     print(f"DataLoaders ready:"
           f"  Train={len(train_loader)} batches,"
           f"  Val={len(val_loader)} batches,"
