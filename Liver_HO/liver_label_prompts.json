@@ -1,0 +1,5 @@
+{
+  "benign": "An ultrasound image of liver with benign findings.",
+  "malignant": "An ultrasound image of liver with malignant findings.",
+  "normal": "An ultrasound image of liver with normal findings."
+}

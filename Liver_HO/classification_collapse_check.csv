@@ -1,0 +1,19 @@
+model,n_samples,n_true_classes,n_pred_classes,most_common_pred,most_common_pred_fraction,y_true_distribution,y_pred_distribution
+CLIP LLM | MLP + image encoder,735,3,1,benign,1.0,"{'benign': 200, 'malignant': 435, 'normal': 100}",{'benign': 735}
+CLIP standard | MLP + image + text encoder,735,3,1,benign,1.0,"{'benign': 200, 'malignant': 435, 'normal': 100}",{'benign': 735}
+BERT LLM | MLP + image + text encoder,735,3,1,normal,1.0,"{'benign': 200, 'malignant': 435, 'normal': 100}",{'normal': 735}
+BERT standard | MLP + image encoder,735,3,1,normal,1.0,"{'benign': 200, 'malignant': 435, 'normal': 100}",{'normal': 735}
+CLIP LLM | MLP + image + text encoder,735,3,1,normal,1.0,"{'benign': 200, 'malignant': 435, 'normal': 100}",{'normal': 735}
+BERT LLM | MLP + image encoder,735,3,1,normal,1.0,"{'benign': 200, 'malignant': 435, 'normal': 100}",{'normal': 735}
+BERT LLM | MLP + text encoder,735,3,2,normal,0.998639455782313,"{'benign': 200, 'malignant': 435, 'normal': 100}","{'normal': 734, 'benign': 1}"
+BERT LLM | MLP heads only,735,3,2,normal,0.9972789115646259,"{'benign': 200, 'malignant': 435, 'normal': 100}","{'normal': 733, 'malignant': 2}"
+BERT standard | MLP + text encoder,735,3,3,normal,0.9959183673469387,"{'benign': 200, 'malignant': 435, 'normal': 100}","{'normal': 732, 'benign': 2, 'malignant': 1}"
+OpenAI CLIP,735,3,3,benign,0.9319727891156463,"{'benign': 200, 'malignant': 435, 'normal': 100}","{'benign': 685, 'normal': 27, 'malignant': 23}"
+BERT standard | MLP + image + text encoder,735,3,2,normal,0.8938775510204081,"{'benign': 200, 'malignant': 435, 'normal': 100}","{'normal': 657, 'benign': 78}"
+BERT standard | MLP heads only,735,3,2,normal,0.8380952380952381,"{'benign': 200, 'malignant': 435, 'normal': 100}","{'normal': 616, 'benign': 119}"
+CLIP LLM | MLP heads only,735,3,3,benign,0.7224489795918367,"{'benign': 200, 'malignant': 435, 'normal': 100}","{'benign': 531, 'normal': 203, 'malignant': 1}"
+CLIP LLM | MLP + text encoder,735,3,2,normal,0.6122448979591837,"{'benign': 200, 'malignant': 435, 'normal': 100}","{'normal': 450, 'benign': 285}"
+BiomedCLIP,735,3,3,normal,0.582312925170068,"{'benign': 200, 'malignant': 435, 'normal': 100}","{'benign': 144, 'normal': 428, 'malignant': 163}"
+CLIP standard | MLP heads only,735,3,3,benign,0.5020408163265306,"{'benign': 200, 'malignant': 435, 'normal': 100}","{'malignant': 201, 'benign': 369, 'normal': 165}"
+CLIP standard | MLP + image encoder,735,3,3,benign,0.4965986394557823,"{'benign': 200, 'malignant': 435, 'normal': 100}","{'benign': 365, 'normal': 127, 'malignant': 243}"
+CLIP standard | MLP + text encoder,735,3,3,benign,0.44761904761904764,"{'benign': 200, 'malignant': 435, 'normal': 100}","{'malignant': 262, 'benign': 329, 'normal': 144}"

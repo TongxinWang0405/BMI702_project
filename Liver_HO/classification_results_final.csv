@@ -1,0 +1,19 @@
+model,accuracy
+CLIP standard | MLP + image encoder,0.6258503401360545
+CLIP standard | MLP + text encoder,0.5863945578231292
+CLIP standard | MLP heads only,0.49523809523809526
+BiomedCLIP,0.35918367346938773
+OpenAI CLIP,0.3006802721088435
+CLIP standard | MLP + image + text encoder,0.272108843537415
+CLIP LLM | MLP + image encoder,0.272108843537415
+CLIP LLM | MLP heads only,0.22993197278911565
+BERT standard | MLP heads only,0.18775510204081633
+CLIP LLM | MLP + text encoder,0.16870748299319727
+BERT standard | MLP + image + text encoder,0.15510204081632653
+BERT LLM | MLP heads only,0.13877551020408163
+BERT standard | MLP + text encoder,0.13877551020408163
+CLIP LLM | MLP + image + text encoder,0.1360544217687075
+BERT LLM | MLP + image + text encoder,0.1360544217687075
+BERT LLM | MLP + text encoder,0.1360544217687075
+BERT LLM | MLP + image encoder,0.1360544217687075
+BERT standard | MLP + image encoder,0.1360544217687075

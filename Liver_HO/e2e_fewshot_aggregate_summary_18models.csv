@@ -1,0 +1,109 @@
+model,setting,fewshot_frac,average_type,auroc_mean,auroc_std,accuracy_mean,accuracy_std,f1_weighted_mean,f1_weighted_std,n_organs_mean
+BERT LLM | MLP + image + text encoder,fewshot_e2e_full_clip,0.01,macro,0.28844229330340443,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + image + text encoder,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.28844229330340443,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + image + text encoder,fewshot_e2e_full_clip,0.05,macro,0.24997895622895627,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + image + text encoder,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.24997895622895625,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + image + text encoder,fewshot_e2e_full_clip,0.1,macro,0.23680867315126575,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + image + text encoder,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.23680867315126575,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + image encoder,fewshot_e2e_full_clip,0.01,macro,0.631127634368375,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + image encoder,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.631127634368375,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + image encoder,fewshot_e2e_full_clip,0.05,macro,0.704253959346552,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + image encoder,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.7042539593465521,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + image encoder,fewshot_e2e_full_clip,0.1,macro,0.5769321299413892,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + image encoder,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.5769321299413892,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + text encoder,fewshot_e2e_full_clip,0.01,macro,0.7173377291432846,,0.6036036036036037,,0.46338273757628595,,1.0
+BERT LLM | MLP + text encoder,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.7173377291432846,,0.6036036036036037,,0.46338273757628595,,1.0
+BERT LLM | MLP + text encoder,fewshot_e2e_full_clip,0.05,macro,0.7285891320613542,,0.6036036036036037,,0.5616603063411574,,1.0
+BERT LLM | MLP + text encoder,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.7285891320613542,,0.6036036036036037,,0.5616603063411574,,1.0
+BERT LLM | MLP + text encoder,fewshot_e2e_full_clip,0.1,macro,0.6261737747848859,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP + text encoder,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.6261737747848859,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP heads only,fewshot_e2e_full_clip,0.01,macro,0.6258090160867938,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP heads only,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.6258090160867938,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP heads only,fewshot_e2e_full_clip,0.05,macro,0.6617845117845117,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP heads only,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.6617845117845117,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP heads only,fewshot_e2e_full_clip,0.1,macro,0.32602958598328974,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT LLM | MLP heads only,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.32602958598328974,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT standard | MLP + image + text encoder,fewshot_e2e_full_clip,0.01,macro,0.6742276156628009,,0.5225225225225225,,0.5384455373460321,,1.0
+BERT standard | MLP + image + text encoder,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.6742276156628009,,0.5225225225225225,,0.5384455373460321,,1.0
+BERT standard | MLP + image + text encoder,fewshot_e2e_full_clip,0.05,macro,0.5761083052749719,,0.6036036036036037,,0.4769973735490977,,1.0
+BERT standard | MLP + image + text encoder,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.5761083052749719,,0.6036036036036037,,0.4769973735490977,,1.0
+BERT standard | MLP + image + text encoder,fewshot_e2e_full_clip,0.1,macro,0.6145552749719416,,0.6126126126126126,,0.5392721914461045,,1.0
+BERT standard | MLP + image + text encoder,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.6145552749719416,,0.6126126126126126,,0.5392721914461045,,1.0
+BERT standard | MLP + image encoder,fewshot_e2e_full_clip,0.01,macro,0.5016071205886021,,0.5675675675675675,,0.4440380229853914,,1.0
+BERT standard | MLP + image encoder,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.5016071205886021,,0.5675675675675675,,0.4440380229853914,,1.0
+BERT standard | MLP + image encoder,fewshot_e2e_full_clip,0.05,macro,0.4959556989649583,,0.6036036036036037,,0.46338273757628595,,1.0
+BERT standard | MLP + image encoder,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.4959556989649583,,0.6036036036036037,,0.46338273757628595,,1.0
+BERT standard | MLP + image encoder,fewshot_e2e_full_clip,0.1,macro,0.7459868749220601,,0.5855855855855856,,0.4593808925204274,,1.0
+BERT standard | MLP + image encoder,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.7459868749220601,,0.5855855855855856,,0.4593808925204274,,1.0
+BERT standard | MLP + text encoder,fewshot_e2e_full_clip,0.01,macro,0.5856411335578002,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT standard | MLP + text encoder,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.5856411335578002,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT standard | MLP + text encoder,fewshot_e2e_full_clip,0.05,macro,0.7475737311385459,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT standard | MLP + text encoder,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.7475737311385459,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT standard | MLP + text encoder,fewshot_e2e_full_clip,0.1,macro,0.7548010973936901,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT standard | MLP + text encoder,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.7548010973936901,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT standard | MLP heads only,fewshot_e2e_full_clip,0.01,macro,0.6164484349669536,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT standard | MLP heads only,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.6164484349669536,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT standard | MLP heads only,fewshot_e2e_full_clip,0.05,macro,0.7008323980546204,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT standard | MLP heads only,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.7008323980546204,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT standard | MLP heads only,fewshot_e2e_full_clip,0.1,macro,0.682444039157002,,0.5945945945945946,,0.44342647732478246,,1.0
+BERT standard | MLP heads only,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.682444039157002,,0.5945945945945946,,0.44342647732478246,,1.0
+BiomedCLIP,fewshot_e2e_full_clip,0.01,macro,0.6505307706696595,,0.5675675675675675,,0.49568717653824035,,1.0
+BiomedCLIP,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.6505307706696595,,0.5675675675675675,,0.49568717653824035,,1.0
+BiomedCLIP,fewshot_e2e_full_clip,0.05,macro,0.7099856590597332,,0.5855855855855856,,0.5705809939386581,,1.0
+BiomedCLIP,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.7099856590597332,,0.5855855855855856,,0.5705809939386581,,1.0
+BiomedCLIP,fewshot_e2e_full_clip,0.1,macro,0.7400252525252525,,0.6216216216216216,,0.591320417407374,,1.0
+BiomedCLIP,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.7400252525252525,,0.6216216216216216,,0.591320417407374,,1.0
+CLIP LLM | MLP + image + text encoder,fewshot_e2e_full_clip,0.01,macro,0.49244177890011226,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP LLM | MLP + image + text encoder,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.49244177890011226,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP LLM | MLP + image + text encoder,fewshot_e2e_full_clip,0.05,macro,0.4731341189674523,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP LLM | MLP + image + text encoder,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.4731341189674523,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP LLM | MLP + image + text encoder,fewshot_e2e_full_clip,0.1,macro,0.5166693945629132,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP LLM | MLP + image + text encoder,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.5166693945629132,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP LLM | MLP + image encoder,fewshot_e2e_full_clip,0.01,macro,0.6590659683252276,,0.6216216216216216,,0.5846355446355446,,1.0
+CLIP LLM | MLP + image encoder,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.6590659683252276,,0.6216216216216216,,0.5846355446355446,,1.0
+CLIP LLM | MLP + image encoder,fewshot_e2e_full_clip,0.05,macro,0.7665271542586357,,0.6126126126126126,,0.5819110702831634,,1.0
+CLIP LLM | MLP + image encoder,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.7665271542586357,,0.6126126126126126,,0.5819110702831634,,1.0
+CLIP LLM | MLP + image encoder,fewshot_e2e_full_clip,0.1,macro,0.7477561104875919,,0.6036036036036037,,0.5599425883920905,,1.0
+CLIP LLM | MLP + image encoder,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.7477561104875919,,0.6036036036036037,,0.5599425883920905,,1.0
+CLIP LLM | MLP + text encoder,fewshot_e2e_full_clip,0.01,macro,0.5860051128569648,,0.5765765765765766,,0.5380856336080216,,1.0
+CLIP LLM | MLP + text encoder,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.5860051128569648,,0.5765765765765766,,0.5380856336080216,,1.0
+CLIP LLM | MLP + text encoder,fewshot_e2e_full_clip,0.05,macro,0.5299421685995761,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP LLM | MLP + text encoder,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.5299421685995761,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP LLM | MLP + text encoder,fewshot_e2e_full_clip,0.1,macro,0.4166183439331587,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP LLM | MLP + text encoder,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.4166183439331587,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP LLM | MLP heads only,fewshot_e2e_full_clip,0.01,macro,0.560538252899364,,0.5045045045045045,,0.46600171600171597,,1.0
+CLIP LLM | MLP heads only,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.560538252899364,,0.5045045045045045,,0.46600171600171597,,1.0
+CLIP LLM | MLP heads only,fewshot_e2e_full_clip,0.05,macro,0.5518354844743734,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP LLM | MLP heads only,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.5518354844743734,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP LLM | MLP heads only,fewshot_e2e_full_clip,0.1,macro,0.6105600760693353,,0.4864864864864865,,0.46885577165951,,1.0
+CLIP LLM | MLP heads only,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.6105600760693353,,0.4864864864864865,,0.46885577165951,,1.0
+CLIP standard | MLP + image + text encoder,fewshot_e2e_full_clip,0.01,macro,0.5802204140167103,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP + image + text encoder,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.5802204140167103,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP + image + text encoder,fewshot_e2e_full_clip,0.05,macro,0.4846481793241053,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP + image + text encoder,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.4846481793241053,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP + image + text encoder,fewshot_e2e_full_clip,0.1,macro,0.7403510412769672,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP + image + text encoder,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.7403510412769672,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP + image encoder,fewshot_e2e_full_clip,0.01,macro,0.9183548447437336,,0.7747747747747747,,0.7480457410034875,,1.0
+CLIP standard | MLP + image encoder,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.9183548447437336,,0.7747747747747747,,0.7480457410034875,,1.0
+CLIP standard | MLP + image encoder,fewshot_e2e_full_clip,0.05,macro,0.7927944569148272,,0.6936936936936937,,0.6928077845287147,,1.0
+CLIP standard | MLP + image encoder,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.7927944569148272,,0.6936936936936937,,0.6928077845287147,,1.0
+CLIP standard | MLP + image encoder,fewshot_e2e_full_clip,0.1,macro,0.9162964521760818,,0.7747747747747747,,0.7540696112124684,,1.0
+CLIP standard | MLP + image encoder,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.9162964521760818,,0.7747747747747747,,0.7540696112124684,,1.0
+CLIP standard | MLP + text encoder,fewshot_e2e_full_clip,0.01,macro,0.7867650268113232,,0.6036036036036037,,0.46283783783783783,,1.0
+CLIP standard | MLP + text encoder,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.7867650268113232,,0.6036036036036037,,0.46283783783783783,,1.0
+CLIP standard | MLP + text encoder,fewshot_e2e_full_clip,0.05,macro,0.5492096894874673,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP + text encoder,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.5492096894874673,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP + text encoder,fewshot_e2e_full_clip,0.1,macro,0.6652013966828781,,0.6216216216216216,,0.5051480051480052,,1.0
+CLIP standard | MLP + text encoder,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.6652013966828781,,0.6216216216216216,,0.5051480051480052,,1.0
+CLIP standard | MLP heads only,fewshot_e2e_full_clip,0.01,macro,0.49912395560543715,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP heads only,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.49912395560543715,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP heads only,fewshot_e2e_full_clip,0.05,macro,0.4828540029928919,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP heads only,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.4828540029928919,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP heads only,fewshot_e2e_full_clip,0.1,macro,0.5496866816311261,,0.5945945945945946,,0.44342647732478246,,1.0
+CLIP standard | MLP heads only,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.5496866816311261,,0.5945945945945946,,0.44342647732478246,,1.0
+OpenAI CLIP,fewshot_e2e_full_clip,0.01,macro,0.7816038471131064,,0.6576576576576577,,0.6104136334476892,,1.0
+OpenAI CLIP,fewshot_e2e_full_clip,0.01,weighted_by_test_n,0.7816038471131064,,0.6576576576576577,,0.6104136334476892,,1.0
+OpenAI CLIP,fewshot_e2e_full_clip,0.05,macro,0.8162473500436462,,0.6666666666666666,,0.6486635889620964,,1.0
+OpenAI CLIP,fewshot_e2e_full_clip,0.05,weighted_by_test_n,0.8162473500436461,,0.6666666666666666,,0.6486635889620964,,1.0
+OpenAI CLIP,fewshot_e2e_full_clip,0.1,macro,0.8418498254146402,,0.6306306306306306,,0.6474201474201474,,1.0
+OpenAI CLIP,fewshot_e2e_full_clip,0.1,weighted_by_test_n,0.84184982541464,,0.6306306306306306,,0.6474201474201474,,1.0

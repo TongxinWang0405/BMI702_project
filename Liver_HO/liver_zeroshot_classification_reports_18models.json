@@ -1,0 +1,596 @@
+{
+  "OpenAI CLIP": {
+    "benign": {
+      "precision": 0.28029197080291973,
+      "recall": 0.96,
+      "f1-score": 0.43389830508474575,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.9565217391304348,
+      "recall": 0.05057471264367816,
+      "f1-score": 0.09606986899563319,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.25925925925925924,
+      "recall": 0.07,
+      "f1-score": 0.11023622047244094,
+      "support": 100.0
+    },
+    "accuracy": 0.3006802721088435,
+    "macro avg": {
+      "precision": 0.4986909897308713,
+      "recall": 0.36019157088122605,
+      "f1-score": 0.21340146485094,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.6776479953853728,
+      "recall": 0.3006802721088435,
+      "f1-score": 0.18992336881264446,
+      "support": 735.0
+    }
+  },
+  "BiomedCLIP": {
+    "benign": {
+      "precision": 0.25,
+      "recall": 0.18,
+      "f1-score": 0.20930232558139536,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.8159509202453987,
+      "recall": 0.3057471264367816,
+      "f1-score": 0.44481605351170567,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.2219626168224299,
+      "recall": 0.95,
+      "f1-score": 0.35984848484848486,
+      "support": 100.0
+    },
+    "accuracy": 0.35918367346938773,
+    "macro avg": {
+      "precision": 0.42930451235594286,
+      "recall": 0.4785823754789272,
+      "f1-score": 0.33798895464719525,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.5811359346788999,
+      "recall": 0.35918367346938773,
+      "f1-score": 0.36917047194383606,
+      "support": 735.0
+    }
+  },
+  "CLIP standard | MLP heads only": {
+    "benign": {
+      "precision": 0.3224932249322493,
+      "recall": 0.595,
+      "f1-score": 0.4182776801405975,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.8805970149253731,
+      "recall": 0.4068965517241379,
+      "f1-score": 0.5566037735849056,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.4121212121212121,
+      "recall": 0.68,
+      "f1-score": 0.5132075471698113,
+      "support": 100.0
+    },
+    "accuracy": 0.49523809523809526,
+    "macro avg": {
+      "precision": 0.5384038173262782,
+      "recall": 0.560632183908046,
+      "f1-score": 0.4960296669651048,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.6649938335933447,
+      "recall": 0.49523809523809526,
+      "f1-score": 0.5130597717748769,
+      "support": 735.0
+    }
+  },
+  "CLIP standard | MLP + image encoder": {
+    "benign": {
+      "precision": 0.4054794520547945,
+      "recall": 0.74,
+      "f1-score": 0.5238938053097345,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.9382716049382716,
+      "recall": 0.5241379310344828,
+      "f1-score": 0.672566371681416,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.6614173228346457,
+      "recall": 0.84,
+      "f1-score": 0.7400881057268722,
+      "support": 100.0
+    },
+    "accuracy": 0.6258503401360545,
+    "macro avg": {
+      "precision": 0.6683894599425706,
+      "recall": 0.7013793103448275,
+      "f1-score": 0.6455160942393409,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.7556268991055395,
+      "recall": 0.6258503401360545,
+      "f1-score": 0.6412978820626531,
+      "support": 735.0
+    }
+  },
+  "CLIP standard | MLP + text encoder": {
+    "benign": {
+      "precision": 0.3951367781155015,
+      "recall": 0.65,
+      "f1-score": 0.4914933837429111,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.9007633587786259,
+      "recall": 0.542528735632184,
+      "f1-score": 0.6771879483500718,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.4513888888888889,
+      "recall": 0.65,
+      "f1-score": 0.5327868852459017,
+      "support": 100.0
+    },
+    "accuracy": 0.5863945578231292,
+    "macro avg": {
+      "precision": 0.5824296752610054,
+      "recall": 0.6141762452107279,
+      "f1-score": 0.5671560724462948,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.7020385109941382,
+      "recall": 0.5863945578231292,
+      "f1-score": 0.607012411980209,
+      "support": 735.0
+    }
+  },
+  "CLIP standard | MLP + image + text encoder": {
+    "benign": {
+      "precision": 0.272108843537415,
+      "recall": 1.0,
+      "f1-score": 0.42780748663101603,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 100.0
+    },
+    "accuracy": 0.272108843537415,
+    "macro avg": {
+      "precision": 0.090702947845805,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.14260249554367202,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.07404322273126938,
+      "recall": 0.272108843537415,
+      "f1-score": 0.1164102004438139,
+      "support": 735.0
+    }
+  },
+  "CLIP LLM | MLP heads only": {
+    "benign": {
+      "precision": 0.3145009416195857,
+      "recall": 0.835,
+      "f1-score": 0.45690834473324216,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 1.0,
+      "recall": 0.0022988505747126436,
+      "f1-score": 0.0045871559633027525,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.0049261083743842365,
+      "recall": 0.01,
+      "f1-score": 0.006600660066006601,
+      "support": 100.0
+    },
+    "accuracy": 0.22993197278911565,
+    "macro avg": {
+      "precision": 0.43980901666465666,
+      "recall": 0.2824329501915709,
+      "f1-score": 0.15603205358751718,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.6780854410358579,
+      "recall": 0.22993197278911565,
+      "f1-score": 0.127941697683382,
+      "support": 735.0
+    }
+  },
+  "CLIP LLM | MLP + image encoder": {
+    "benign": {
+      "precision": 0.272108843537415,
+      "recall": 1.0,
+      "f1-score": 0.42780748663101603,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 100.0
+    },
+    "accuracy": 0.272108843537415,
+    "macro avg": {
+      "precision": 0.090702947845805,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.14260249554367202,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.07404322273126938,
+      "recall": 0.272108843537415,
+      "f1-score": 0.1164102004438139,
+      "support": 735.0
+    }
+  },
+  "CLIP LLM | MLP + text encoder": {
+    "benign": {
+      "precision": 0.4105263157894737,
+      "recall": 0.585,
+      "f1-score": 0.4824742268041237,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.015555555555555555,
+      "recall": 0.07,
+      "f1-score": 0.025454545454545455,
+      "support": 100.0
+    },
+    "accuracy": 0.16870748299319727,
+    "macro avg": {
+      "precision": 0.14202729044834309,
+      "recall": 0.21833333333333335,
+      "f1-score": 0.16930959075288973,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.11382424314755142,
+      "recall": 0.16870748299319727,
+      "f1-score": 0.13474870735548203,
+      "support": 735.0
+    }
+  },
+  "CLIP LLM | MLP + image + text encoder": {
+    "benign": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.1360544217687075,
+      "recall": 1.0,
+      "f1-score": 0.23952095808383234,
+      "support": 100.0
+    },
+    "accuracy": 0.1360544217687075,
+    "macro avg": {
+      "precision": 0.0453514739229025,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.07984031936127745,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.018510805682817346,
+      "recall": 0.1360544217687075,
+      "f1-score": 0.032587885453582634,
+      "support": 735.0
+    }
+  },
+  "BERT LLM | MLP heads only": {
+    "benign": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 1.0,
+      "recall": 0.004597701149425287,
+      "f1-score": 0.009153318077803204,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.1364256480218281,
+      "recall": 1.0,
+      "f1-score": 0.24009603841536614,
+      "support": 100.0
+    },
+    "accuracy": 0.13877551020408163,
+    "macro avg": {
+      "precision": 0.3788085493406094,
+      "recall": 0.3348659003831418,
+      "f1-score": 0.08308311883105644,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.6103980473499085,
+      "recall": 0.13877551020408163,
+      "f1-score": 0.0380833975583415,
+      "support": 735.0
+    }
+  },
+  "BERT LLM | MLP + image encoder": {
+    "benign": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.1360544217687075,
+      "recall": 1.0,
+      "f1-score": 0.23952095808383234,
+      "support": 100.0
+    },
+    "accuracy": 0.1360544217687075,
+    "macro avg": {
+      "precision": 0.0453514739229025,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.07984031936127745,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.018510805682817346,
+      "recall": 0.1360544217687075,
+      "f1-score": 0.032587885453582634,
+      "support": 735.0
+    }
+  },
+  "BERT LLM | MLP + text encoder": {
+    "benign": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.1362397820163488,
+      "recall": 1.0,
+      "f1-score": 0.23980815347721823,
+      "support": 100.0
+    },
+    "accuracy": 0.1360544217687075,
+    "macro avg": {
+      "precision": 0.04541326067211626,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.07993605115907275,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.018536024764129088,
+      "recall": 0.1360544217687075,
+      "f1-score": 0.03262695965676438,
+      "support": 735.0
+    }
+  },
+  "BERT LLM | MLP + image + text encoder": {
+    "benign": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.1360544217687075,
+      "recall": 1.0,
+      "f1-score": 0.23952095808383234,
+      "support": 100.0
+    },
+    "accuracy": 0.1360544217687075,
+    "macro avg": {
+      "precision": 0.0453514739229025,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.07984031936127745,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.018510805682817346,
+      "recall": 0.1360544217687075,
+      "f1-score": 0.032587885453582634,
+      "support": 735.0
+    }
+  },
+  "BERT standard | MLP heads only": {
+    "benign": {
+      "precision": 0.4369747899159664,
+      "recall": 0.26,
+      "f1-score": 0.32601880877742945,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.1396103896103896,
+      "recall": 0.86,
+      "f1-score": 0.24022346368715083,
+      "support": 100.0
+    },
+    "accuracy": 0.18775510204081633,
+    "macro avg": {
+      "precision": 0.19219505984211868,
+      "recall": 0.37333333333333335,
+      "f1-score": 0.1887474241548601,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.137899315570384,
+      "recall": 0.18775510204081633,
+      "f1-score": 0.12139606547510337,
+      "support": 735.0
+    }
+  },
+  "BERT standard | MLP + image encoder": {
+    "benign": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.1360544217687075,
+      "recall": 1.0,
+      "f1-score": 0.23952095808383234,
+      "support": 100.0
+    },
+    "accuracy": 0.1360544217687075,
+    "macro avg": {
+      "precision": 0.0453514739229025,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.07984031936127745,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.018510805682817346,
+      "recall": 0.1360544217687075,
+      "f1-score": 0.032587885453582634,
+      "support": 735.0
+    }
+  },
+  "BERT standard | MLP + text encoder": {
+    "benign": {
+      "precision": 1.0,
+      "recall": 0.01,
+      "f1-score": 0.019801980198019802,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.1366120218579235,
+      "recall": 1.0,
+      "f1-score": 0.2403846153846154,
+      "support": 100.0
+    },
+    "accuracy": 0.13877551020408163,
+    "macro avg": {
+      "precision": 0.3788706739526411,
+      "recall": 0.33666666666666667,
+      "f1-score": 0.08672886519421173,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.2906955131779488,
+      "recall": 0.13877551020408163,
+      "f1-score": 0.038093683779680955,
+      "support": 735.0
+    }
+  },
+  "BERT standard | MLP + image + text encoder": {
+    "benign": {
+      "precision": 0.19230769230769232,
+      "recall": 0.075,
+      "f1-score": 0.1079136690647482,
+      "support": 200.0
+    },
+    "malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 435.0
+    },
+    "normal": {
+      "precision": 0.1506849315068493,
+      "recall": 0.99,
+      "f1-score": 0.261558784676354,
+      "support": 100.0
+    },
+    "accuracy": 0.15510204081632653,
+    "macro avg": {
+      "precision": 0.11433087460484721,
+      "recall": 0.355,
+      "f1-score": 0.1231574845803674,
+      "support": 735.0
+    },
+    "weighted avg": {
+      "precision": 0.07282997498261687,
+      "recall": 0.15510204081632653,
+      "f1-score": 0.06495049289875517,
+      "support": 735.0
+    }
+  }
+}
