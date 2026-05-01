@@ -1,0 +1,250 @@
+nohup: ignoring input
+<frozen importlib._bootstrap_external>:1297: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+Using device: cuda
+Text encoder: openai/clip-vit-base-patch32 (key=clip, max_seq_len=77)
+Training with LLM-generated captions (column: llm_caption)
+DataLoaders ready:  Train=90 batches,  Val=20 batches,  Test=20 batches
+Loaded EchoCare pretrained weights from '/home/zhuoyangl/tryout/bmi702/echocare_encoder.pth'
+  Trainable: 68,280,833 / 188,502,521  (36.2%)
+
+==============================================================
+  Training: Exp 3 (CLIP-text): MLP + Text Encoder
+==============================================================
+  [E1] Batch 1/90 | loss=5.0347 | temp=0.0700
+  [E1] Batch 11/90 | loss=4.8294 | temp=0.0701
+  [E1] Batch 21/90 | loss=4.6634 | temp=0.0701
+  [E1] Batch 31/90 | loss=4.3110 | temp=0.0701
+  [E1] Batch 41/90 | loss=3.9541 | temp=0.0700
+  [E1] Batch 51/90 | loss=3.9196 | temp=0.0700
+  [E1] Batch 61/90 | loss=3.6572 | temp=0.0700
+  [E1] Batch 71/90 | loss=3.8388 | temp=0.0700
+  [E1] Batch 81/90 | loss=3.5564 | temp=0.0700
+  [E1] Batch 90/90 | loss=3.6502 | temp=0.0700
+>>> Epoch  1/20  Train=4.1419  Val=3.7677  LR=9.94e-05
+  [Checkpoint] best val=3.7677 → /home/zhuoyangl/tryout/bmi702/checkpoints_llm/exp3_mlp_text_best.pth
+  [E2] Batch 1/90 | loss=3.5628 | temp=0.0700
+  [E2] Batch 11/90 | loss=3.5788 | temp=0.0700
+  [E2] Batch 21/90 | loss=3.4960 | temp=0.0700
+  [E2] Batch 31/90 | loss=3.6680 | temp=0.0700
+  [E2] Batch 41/90 | loss=3.4266 | temp=0.0700
+  [E2] Batch 51/90 | loss=3.5054 | temp=0.0700
+  [E2] Batch 61/90 | loss=3.5294 | temp=0.0701
+  [E2] Batch 71/90 | loss=3.4626 | temp=0.0700
+  [E2] Batch 81/90 | loss=3.5520 | temp=0.0700
+  [E2] Batch 90/90 | loss=3.3885 | temp=0.0700
+>>> Epoch  2/20  Train=3.5159  Val=3.3978  LR=9.76e-05
+  [Checkpoint] best val=3.3978 → /home/zhuoyangl/tryout/bmi702/checkpoints_llm/exp3_mlp_text_best.pth
+  [E3] Batch 1/90 | loss=3.2979 | temp=0.0700
+  [E3] Batch 11/90 | loss=3.4660 | temp=0.0700
+  [E3] Batch 21/90 | loss=3.3585 | temp=0.0700
+  [E3] Batch 31/90 | loss=3.4237 | temp=0.0700
+  [E3] Batch 41/90 | loss=3.1466 | temp=0.0700
+  [E3] Batch 51/90 | loss=3.2420 | temp=0.0700
+  [E3] Batch 61/90 | loss=3.3076 | temp=0.0700
+  [E3] Batch 71/90 | loss=3.4324 | temp=0.0700
+  [E3] Batch 81/90 | loss=3.2547 | temp=0.0699
+  [E3] Batch 90/90 | loss=3.2087 | temp=0.0699
+>>> Epoch  3/20  Train=3.3169  Val=3.2528  LR=9.46e-05
+  [Checkpoint] best val=3.2528 → /home/zhuoyangl/tryout/bmi702/checkpoints_llm/exp3_mlp_text_best.pth
+  [E4] Batch 1/90 | loss=3.2010 | temp=0.0699
+  [E4] Batch 11/90 | loss=3.2959 | temp=0.0699
+  [E4] Batch 21/90 | loss=3.2750 | temp=0.0699
+  [E4] Batch 31/90 | loss=3.1309 | temp=0.0699
+  [E4] Batch 41/90 | loss=3.1391 | temp=0.0698
+  [E4] Batch 51/90 | loss=3.1357 | temp=0.0698
+  [E4] Batch 61/90 | loss=3.1851 | temp=0.0698
+  [E4] Batch 71/90 | loss=3.1057 | temp=0.0698
+  [E4] Batch 81/90 | loss=3.1496 | temp=0.0698
+  [E4] Batch 90/90 | loss=3.2008 | temp=0.0697
+>>> Epoch  4/20  Train=3.1741  Val=3.1521  LR=9.05e-05
+  [Checkpoint] best val=3.1521 → /home/zhuoyangl/tryout/bmi702/checkpoints_llm/exp3_mlp_text_best.pth
+  [E5] Batch 1/90 | loss=2.8691 | temp=0.0697
+  [E5] Batch 11/90 | loss=3.2553 | temp=0.0697
+  [E5] Batch 21/90 | loss=3.1582 | temp=0.0697
+  [E5] Batch 31/90 | loss=3.1734 | temp=0.0697
+  [E5] Batch 41/90 | loss=2.8811 | temp=0.0696
+  [E5] Batch 51/90 | loss=3.1274 | temp=0.0696
+  [E5] Batch 61/90 | loss=3.0288 | temp=0.0696
+  [E5] Batch 71/90 | loss=3.1486 | temp=0.0695
+  [E5] Batch 81/90 | loss=3.0671 | temp=0.0695
+  [E5] Batch 90/90 | loss=3.1999 | temp=0.0695
+>>> Epoch  5/20  Train=3.0446  Val=3.1536  LR=8.54e-05
+  [E6] Batch 1/90 | loss=2.8365 | temp=0.0695
+  [E6] Batch 11/90 | loss=2.9509 | temp=0.0695
+  [E6] Batch 21/90 | loss=2.8854 | temp=0.0694
+  [E6] Batch 31/90 | loss=2.9424 | temp=0.0694
+  [E6] Batch 41/90 | loss=3.1299 | temp=0.0694
+  [E6] Batch 51/90 | loss=2.8026 | temp=0.0693
+  [E6] Batch 61/90 | loss=2.9197 | temp=0.0693
+  [E6] Batch 71/90 | loss=2.8665 | temp=0.0693
+  [E6] Batch 81/90 | loss=2.9163 | temp=0.0692
+  [E6] Batch 90/90 | loss=2.7371 | temp=0.0692
+>>> Epoch  6/20  Train=2.9007  Val=3.1249  LR=7.94e-05
+  [Checkpoint] best val=3.1249 → /home/zhuoyangl/tryout/bmi702/checkpoints_llm/exp3_mlp_text_best.pth
+  [E7] Batch 1/90 | loss=2.7895 | temp=0.0692
+  [E7] Batch 11/90 | loss=2.8087 | temp=0.0691
+  [E7] Batch 21/90 | loss=2.7844 | temp=0.0691
+  [E7] Batch 31/90 | loss=2.8076 | temp=0.0691
+  [E7] Batch 41/90 | loss=2.5943 | temp=0.0690
+  [E7] Batch 51/90 | loss=2.7241 | temp=0.0690
+  [E7] Batch 61/90 | loss=3.1607 | temp=0.0689
+  [E7] Batch 71/90 | loss=2.8300 | temp=0.0689
+  [E7] Batch 81/90 | loss=2.6556 | temp=0.0689
+  [E7] Batch 90/90 | loss=2.6625 | temp=0.0688
+>>> Epoch  7/20  Train=2.7583  Val=3.0546  LR=7.27e-05
+  [Checkpoint] best val=3.0546 → /home/zhuoyangl/tryout/bmi702/checkpoints_llm/exp3_mlp_text_best.pth
+  [E8] Batch 1/90 | loss=2.5745 | temp=0.0688
+  [E8] Batch 11/90 | loss=2.5359 | temp=0.0688
+  [E8] Batch 21/90 | loss=2.6787 | temp=0.0687
+  [E8] Batch 31/90 | loss=2.5249 | temp=0.0686
+  [E8] Batch 41/90 | loss=2.3257 | temp=0.0686
+  [E8] Batch 51/90 | loss=2.5693 | temp=0.0685
+  [E8] Batch 61/90 | loss=2.6348 | temp=0.0685
+  [E8] Batch 71/90 | loss=2.7133 | temp=0.0685
+  [E8] Batch 81/90 | loss=2.7361 | temp=0.0684
+  [E8] Batch 90/90 | loss=2.5860 | temp=0.0684
+>>> Epoch  8/20  Train=2.5958  Val=3.1512  LR=6.55e-05
+  [E9] Batch 1/90 | loss=2.4569 | temp=0.0684
+  [E9] Batch 11/90 | loss=2.3967 | temp=0.0684
+  [E9] Batch 21/90 | loss=2.3806 | temp=0.0683
+  [E9] Batch 31/90 | loss=2.4893 | temp=0.0682
+  [E9] Batch 41/90 | loss=2.6099 | temp=0.0682
+  [E9] Batch 51/90 | loss=2.4679 | temp=0.0682
+  [E9] Batch 61/90 | loss=2.4445 | temp=0.0681
+  [E9] Batch 71/90 | loss=2.5718 | temp=0.0681
+  [E9] Batch 81/90 | loss=2.3306 | temp=0.0680
+  [E9] Batch 90/90 | loss=2.3552 | temp=0.0680
+>>> Epoch  9/20  Train=2.4404  Val=3.0415  LR=5.78e-05
+  [Checkpoint] best val=3.0415 → /home/zhuoyangl/tryout/bmi702/checkpoints_llm/exp3_mlp_text_best.pth
+  [E10] Batch 1/90 | loss=2.1825 | temp=0.0680
+  [E10] Batch 11/90 | loss=2.2850 | temp=0.0679
+  [E10] Batch 21/90 | loss=2.2516 | temp=0.0679
+  [E10] Batch 31/90 | loss=2.0855 | temp=0.0678
+  [E10] Batch 41/90 | loss=2.4481 | temp=0.0678
+  [E10] Batch 51/90 | loss=2.2265 | temp=0.0677
+  [E10] Batch 61/90 | loss=2.2395 | temp=0.0677
+  [E10] Batch 71/90 | loss=2.1164 | temp=0.0676
+  [E10] Batch 81/90 | loss=2.3031 | temp=0.0676
+  [E10] Batch 90/90 | loss=2.5467 | temp=0.0675
+>>> Epoch 10/20  Train=2.2614  Val=3.0500  LR=5.00e-05
+  [E11] Batch 1/90 | loss=2.0334 | temp=0.0675
+  [E11] Batch 11/90 | loss=2.2945 | temp=0.0675
+  [E11] Batch 21/90 | loss=2.0194 | temp=0.0674
+  [E11] Batch 31/90 | loss=2.0689 | temp=0.0674
+  [E11] Batch 41/90 | loss=1.7220 | temp=0.0673
+  [E11] Batch 51/90 | loss=2.1581 | temp=0.0673
+  [E11] Batch 61/90 | loss=2.1117 | temp=0.0672
+  [E11] Batch 71/90 | loss=2.1570 | temp=0.0672
+  [E11] Batch 81/90 | loss=2.1302 | temp=0.0672
+  [E11] Batch 90/90 | loss=2.3258 | temp=0.0671
+>>> Epoch 11/20  Train=2.1195  Val=2.9834  LR=4.22e-05
+  [Checkpoint] best val=2.9834 → /home/zhuoyangl/tryout/bmi702/checkpoints_llm/exp3_mlp_text_best.pth
+  [E12] Batch 1/90 | loss=1.9215 | temp=0.0671
+  [E12] Batch 11/90 | loss=1.7986 | temp=0.0671
+  [E12] Batch 21/90 | loss=1.8237 | temp=0.0670
+  [E12] Batch 31/90 | loss=1.8927 | temp=0.0670
+  [E12] Batch 41/90 | loss=2.1729 | temp=0.0669
+  [E12] Batch 51/90 | loss=2.1563 | temp=0.0669
+  [E12] Batch 61/90 | loss=2.1905 | temp=0.0669
+  [E12] Batch 71/90 | loss=2.1630 | temp=0.0668
+  [E12] Batch 81/90 | loss=2.1407 | temp=0.0668
+  [E12] Batch 90/90 | loss=1.9947 | temp=0.0668
+>>> Epoch 12/20  Train=1.9737  Val=2.9802  LR=3.45e-05
+  [Checkpoint] best val=2.9802 → /home/zhuoyangl/tryout/bmi702/checkpoints_llm/exp3_mlp_text_best.pth
+  [E13] Batch 1/90 | loss=1.8359 | temp=0.0668
+  [E13] Batch 11/90 | loss=1.9353 | temp=0.0667
+  [E13] Batch 21/90 | loss=1.9415 | temp=0.0667
+  [E13] Batch 31/90 | loss=1.8829 | temp=0.0666
+  [E13] Batch 41/90 | loss=2.0700 | temp=0.0666
+  [E13] Batch 51/90 | loss=1.8460 | temp=0.0666
+  [E13] Batch 61/90 | loss=1.8836 | temp=0.0665
+  [E13] Batch 71/90 | loss=1.7370 | temp=0.0665
+  [E13] Batch 81/90 | loss=1.7689 | temp=0.0665
+  [E13] Batch 90/90 | loss=1.7414 | temp=0.0664
+>>> Epoch 13/20  Train=1.8264  Val=3.0349  LR=2.73e-05
+  [E14] Batch 1/90 | loss=1.4876 | temp=0.0664
+  [E14] Batch 11/90 | loss=1.8282 | temp=0.0664
+  [E14] Batch 21/90 | loss=2.0036 | temp=0.0664
+  [E14] Batch 31/90 | loss=1.8098 | temp=0.0664
+  [E14] Batch 41/90 | loss=1.5765 | temp=0.0663
+  [E14] Batch 51/90 | loss=1.6686 | temp=0.0663
+  [E14] Batch 61/90 | loss=1.5666 | temp=0.0663
+  [E14] Batch 71/90 | loss=1.6940 | temp=0.0662
+  [E14] Batch 81/90 | loss=1.8068 | temp=0.0662
+  [E14] Batch 90/90 | loss=1.6043 | temp=0.0662
+>>> Epoch 14/20  Train=1.7119  Val=2.9762  LR=2.06e-05
+  [Checkpoint] best val=2.9762 → /home/zhuoyangl/tryout/bmi702/checkpoints_llm/exp3_mlp_text_best.pth
+  [E15] Batch 1/90 | loss=1.6403 | temp=0.0662
+  [E15] Batch 11/90 | loss=1.6576 | temp=0.0662
+  [E15] Batch 21/90 | loss=1.7010 | temp=0.0661
+  [E15] Batch 31/90 | loss=1.6290 | temp=0.0661
+  [E15] Batch 41/90 | loss=1.7581 | temp=0.0661
+  [E15] Batch 51/90 | loss=1.5213 | temp=0.0661
+  [E15] Batch 61/90 | loss=1.6568 | temp=0.0661
+  [E15] Batch 71/90 | loss=1.4716 | temp=0.0660
+  [E15] Batch 81/90 | loss=1.8332 | temp=0.0660
+  [E15] Batch 90/90 | loss=1.7034 | temp=0.0660
+>>> Epoch 15/20  Train=1.6146  Val=3.0389  LR=1.46e-05
+  [E16] Batch 1/90 | loss=1.4461 | temp=0.0660
+  [E16] Batch 11/90 | loss=1.6012 | temp=0.0660
+  [E16] Batch 21/90 | loss=1.4894 | temp=0.0660
+  [E16] Batch 31/90 | loss=1.5853 | temp=0.0660
+  [E16] Batch 41/90 | loss=1.3675 | temp=0.0659
+  [E16] Batch 51/90 | loss=1.5469 | temp=0.0659
+  [E16] Batch 61/90 | loss=1.8497 | temp=0.0659
+  [E16] Batch 71/90 | loss=1.9028 | temp=0.0659
+  [E16] Batch 81/90 | loss=1.5737 | temp=0.0659
+  [E16] Batch 90/90 | loss=1.8278 | temp=0.0659
+>>> Epoch 16/20  Train=1.5326  Val=3.0041  LR=9.55e-06
+  [E17] Batch 1/90 | loss=1.5467 | temp=0.0659
+  [E17] Batch 11/90 | loss=1.4845 | temp=0.0659
+  [E17] Batch 21/90 | loss=1.5933 | temp=0.0659
+  [E17] Batch 31/90 | loss=1.5282 | temp=0.0658
+  [E17] Batch 41/90 | loss=1.3216 | temp=0.0658
+  [E17] Batch 51/90 | loss=1.4161 | temp=0.0658
+  [E17] Batch 61/90 | loss=1.3703 | temp=0.0658
+  [E17] Batch 71/90 | loss=1.5675 | temp=0.0658
+  [E17] Batch 81/90 | loss=1.3115 | temp=0.0658
+  [E17] Batch 90/90 | loss=1.5322 | temp=0.0658
+>>> Epoch 17/20  Train=1.4710  Val=3.0499  LR=5.45e-06
+  [E18] Batch 1/90 | loss=1.3930 | temp=0.0658
+  [E18] Batch 11/90 | loss=1.6260 | temp=0.0658
+  [E18] Batch 21/90 | loss=1.3727 | temp=0.0658
+  [E18] Batch 31/90 | loss=1.6999 | temp=0.0658
+  [E18] Batch 41/90 | loss=1.3610 | temp=0.0658
+  [E18] Batch 51/90 | loss=1.5095 | temp=0.0658
+  [E18] Batch 61/90 | loss=1.4051 | temp=0.0658
+  [E18] Batch 71/90 | loss=1.4596 | temp=0.0658
+  [E18] Batch 81/90 | loss=1.2422 | temp=0.0658
+  [E18] Batch 90/90 | loss=1.4420 | temp=0.0657
+>>> Epoch 18/20  Train=1.4255  Val=3.0226  LR=2.45e-06
+  [E19] Batch 1/90 | loss=1.4357 | temp=0.0657
+  [E19] Batch 11/90 | loss=1.3735 | temp=0.0657
+  [E19] Batch 21/90 | loss=1.5109 | temp=0.0657
+  [E19] Batch 31/90 | loss=1.5180 | temp=0.0657
+  [E19] Batch 41/90 | loss=1.3939 | temp=0.0657
+  [E19] Batch 51/90 | loss=1.5671 | temp=0.0657
+  [E19] Batch 61/90 | loss=1.2183 | temp=0.0657
+  [E19] Batch 71/90 | loss=1.3603 | temp=0.0657
+  [E19] Batch 81/90 | loss=1.0399 | temp=0.0657
+  [E19] Batch 90/90 | loss=1.5308 | temp=0.0657
+>>> Epoch 19/20  Train=1.4011  Val=3.0151  LR=6.16e-07
+  [E20] Batch 1/90 | loss=1.1753 | temp=0.0657
+  [E20] Batch 11/90 | loss=1.3359 | temp=0.0657
+  [E20] Batch 21/90 | loss=1.4216 | temp=0.0657
+  [E20] Batch 31/90 | loss=1.2335 | temp=0.0657
+  [E20] Batch 41/90 | loss=1.3685 | temp=0.0657
+  [E20] Batch 51/90 | loss=1.4280 | temp=0.0657
+  [E20] Batch 61/90 | loss=1.3498 | temp=0.0657
+  [E20] Batch 71/90 | loss=1.3644 | temp=0.0657
+  [E20] Batch 81/90 | loss=1.3741 | temp=0.0657
+  [E20] Batch 90/90 | loss=1.3494 | temp=0.0657
+>>> Epoch 20/20  Train=1.3804  Val=3.0249  LR=0.00e+00
+
+Training complete. Best val loss: 2.9762
+Saved final model → /home/zhuoyangl/tryout/bmi702/checkpoints_llm/echocare_clip_mlp_and_text_encoder.pt
+
+Test-set alignment score for Exp 3 (CLIP-text): MLP + Text Encoder:
+  Alignment score (paired):   0.4644
+  Cross-pair mean similarity: 0.0290
+Saved run summary → /home/zhuoyangl/tryout/bmi702/checkpoints_llm/exp3_summary.json
