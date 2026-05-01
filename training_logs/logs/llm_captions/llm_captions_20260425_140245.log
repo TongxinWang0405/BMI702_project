@@ -1,0 +1,82 @@
+14:02:45 | INFO | Logging to /home/zhuoyangl/tryout/bmi702/logs/llm_captions/llm_captions_20260425_140245.log
+14:02:45 | INFO | ========================================================================
+14:02:45 | INFO | LLM caption generation run 20260425_140245
+14:02:45 | INFO |   model               : Qwen/Qwen3-4B-Instruct-2507
+14:02:45 | INFO |   sampling            : temp=1.0 top_p=0.95 rep_pen=1.05 seed=42
+14:02:45 | INFO |   prepared_data_root  : /home/zhuoyangl/tryout/bmi702/data/data
+14:02:45 | INFO |   raw_metadata_root   : /home/zhuoyangl/tryout/bmi702/data/metadata
+14:02:45 | INFO |   data_split_dir      : /home/zhuoyangl/tryout/bmi702/data/data_split_temp
+14:02:45 | INFO |   splits              : ['train', 'val', 'test', 'full', 'held_out']
+14:02:45 | INFO | ========================================================================
+14:02:45 | INFO |   loaded split train   : 11,524 rows from /home/zhuoyangl/tryout/bmi702/data/data_split_temp/train_df.parquet
+14:02:45 | INFO |   loaded split val     :  2,470 rows from /home/zhuoyangl/tryout/bmi702/data/data_split_temp/val_df.parquet
+14:02:45 | INFO |   loaded split test    :  2,470 rows from /home/zhuoyangl/tryout/bmi702/data/data_split_temp/test_df.parquet
+14:02:45 | INFO |   loaded split full    : 16,464 rows from /home/zhuoyangl/tryout/bmi702/data/data_split_temp/full_df.parquet
+14:02:45 | INFO |   loaded split held_out:  1,515 rows from /home/zhuoyangl/tryout/bmi702/data/data_split_temp/held_out_df.parquet
+14:02:45 | INFO | Loading per-dataset metadata:
+14:02:45 | INFO |   [BUS-Lesion] skipped (natural captions — keep as-is)
+14:02:45 | INFO |   [BrEaST-Lesions_USG-images_and_masks] loading — BrEaST (clinical-data Excel)
+14:02:45 | INFO |   [BrEaST-Lesions_USG-images_and_masks] 256 basenames, fields sample = ['Age', 'BI-RADS', 'Calcifications', 'Classification', 'Diagnosis', 'Echogenicity', 'Halo', 'Interpretation', 'Margin', 'Posterior features', 'Shape', 'Signs', 'Skin thickening', 'Symptoms', 'Tissue composition', 'Verification']
+14:02:45 | INFO |   [Dataset_BUSI_with_GT] loading — BUSI (breast + label)
+14:02:45 | INFO |   [Dataset_BUSI_with_GT] 780 basenames, fields sample = ['Condition', 'Tissue']
+14:02:45 | INFO |   [Liver USData (with Chinese annotation)] skipped (natural captions — keep as-is)
+14:02:45 | INFO |   [Liver_ultrasound] loading — Liver AULI (filename prefix)
+14:02:45 | INFO |   [Liver_ultrasound] 735 basenames, fields sample = ['Condition', 'Tissue']
+14:02:45 | INFO |   [Lung_ultrasound] loading — Lung (rewrite existing template caption)
+14:02:45 | INFO |   [Lung_ultrasound] 1,062 basenames, fields sample = ['OriginalCaption', 'Tissue']
+14:02:45 | INFO |   [Thyroid] loading — Thyroid (tissue + label)
+14:02:45 | INFO |   [Thyroid] 1,337 basenames, fields sample = ['Condition', 'Tissue']
+14:02:45 | INFO |   [Thyroid USData (with Chinese annotation)] skipped (natural captions — keep as-is)
+14:02:45 | INFO | Unique images to re-caption: 5,114 (of 17,970 total unique across splits)
+14:02:45 | INFO | Loading tokenizer for Qwen/Qwen3-4B-Instruct-2507 ...
+14:02:46 | INFO | Pre-LLM (template) caption stats:
+14:02:46 | INFO |   global diversity  : {"n_captions": 5114, "tokens_total": 64762, "unique_unigrams": 302, "unique_bigrams": 964, "distinct_1": 0.0047, "distinct_2": 0.0162, "length_mean_words": 12.66, "length_p50_words": 10, "length_p90_words": 21}
+14:02:46 | INFO |   global token stat : {"subtoken_mean": 17.69, "subtoken_p50": 11, "subtoken_p90": 27, "subtoken_max": 131}
+14:02:46 | INFO |   [BrEaST-Lesions_USG-images_and_masks] n=248 diversity={"n_captions": 248, "tokens_total": 12810, "unique_unigrams": 236, "unique_bigrams": 666, "distinct_1": 0.0184, "distinct_2": 0.053, "length_mean_words": 51.65, "length_p50_words": 51, "length_p90_words": 58} tokens={"subtoken_mean": 104.1, "subtoken_p50": 103, "subtoken_p90": 118, "subtoken_max": 131}
+14:02:46 | INFO |   [Dataset_BUSI_with_GT] n=780 diversity={"n_captions": 780, "tokens_total": 6491, "unique_unigrams": 38, "unique_bigrams": 80, "distinct_1": 0.0059, "distinct_2": 0.014, "length_mean_words": 8.32, "length_p50_words": 8, "length_p90_words": 10} tokens={"subtoken_mean": 10.33, "subtoken_p50": 10, "subtoken_p90": 12, "subtoken_max": 14}
+14:02:46 | INFO |   [Liver_ultrasound] n=735 diversity={"n_captions": 735, "tokens_total": 6202, "unique_unigrams": 38, "unique_bigrams": 80, "distinct_1": 0.0061, "distinct_2": 0.0146, "length_mean_words": 8.44, "length_p50_words": 8, "length_p90_words": 10} tokens={"subtoken_mean": 10.43, "subtoken_p50": 11, "subtoken_p90": 12, "subtoken_max": 14}
+14:02:46 | INFO |   [Lung_ultrasound] n=1,062 diversity={"n_captions": 1062, "tokens_total": 19763, "unique_unigrams": 93, "unique_bigrams": 238, "distinct_1": 0.0047, "distinct_2": 0.0127, "length_mean_words": 18.61, "length_p50_words": 19, "length_p90_words": 23} tokens={"subtoken_mean": 23.56, "subtoken_p50": 22, "subtoken_p90": 31, "subtoken_max": 45}
+14:02:47 | INFO |   [Thyroid] n=2,289 diversity={"n_captions": 2289, "tokens_total": 19496, "unique_unigrams": 33, "unique_bigrams": 72, "distinct_1": 0.0017, "distinct_2": 0.0042, "length_mean_words": 8.52, "length_p50_words": 8, "length_p90_words": 10} tokens={"subtoken_mean": 10.44, "subtoken_p50": 11, "subtoken_p90": 12, "subtoken_max": 12}
+14:02:47 | INFO | Loading vLLM engine for Qwen/Qwen3-4B-Instruct-2507 ...
+14:03:13 | INFO | Generating 5,114 captions ...
+14:04:46 | INFO | Generation done in 92.8s (55.1 prompts/s)
+14:04:46 | INFO | Post-LLM caption stats:
+14:04:46 | INFO |   global diversity  : {"n_captions": 5114, "tokens_total": 98613, "unique_unigrams": 722, "unique_bigrams": 4431, "distinct_1": 0.0073, "distinct_2": 0.0474, "length_mean_words": 19.28, "length_p50_words": 18, "length_p90_words": 24}
+14:04:46 | INFO |   global token stat : {"subtoken_mean": 25.64, "subtoken_p50": 23, "subtoken_p90": 34, "subtoken_max": 90}
+14:04:47 | INFO |   [BrEaST-Lesions_USG-images_and_masks] n=248 diversity={"n_captions": 248, "tokens_total": 9098, "unique_unigrams": 424, "unique_bigrams": 2073, "distinct_1": 0.0466, "distinct_2": 0.2342, "length_mean_words": 36.69, "length_p50_words": 36, "length_p90_words": 44} tokens={"subtoken_mean": 64.17, "subtoken_p50": 63, "subtoken_p90": 77, "subtoken_max": 90}
+14:04:47 | INFO |   [Dataset_BUSI_with_GT] n=780 diversity={"n_captions": 780, "tokens_total": 13834, "unique_unigrams": 88, "unique_bigrams": 219, "distinct_1": 0.0064, "distinct_2": 0.0168, "length_mean_words": 17.74, "length_p50_words": 18, "length_p90_words": 22} tokens={"subtoken_mean": 21.92, "subtoken_p50": 22, "subtoken_p90": 27, "subtoken_max": 31}
+14:04:47 | INFO |   [Liver_ultrasound] n=735 diversity={"n_captions": 735, "tokens_total": 12578, "unique_unigrams": 96, "unique_bigrams": 217, "distinct_1": 0.0076, "distinct_2": 0.0183, "length_mean_words": 17.11, "length_p50_words": 15, "length_p90_words": 23} tokens={"subtoken_mean": 22.26, "subtoken_p50": 19, "subtoken_p90": 34, "subtoken_max": 41}
+14:04:47 | INFO |   [Lung_ultrasound] n=1,062 diversity={"n_captions": 1062, "tokens_total": 22655, "unique_unigrams": 375, "unique_bigrams": 2055, "distinct_1": 0.0166, "distinct_2": 0.0952, "length_mean_words": 21.33, "length_p50_words": 21, "length_p90_words": 25} tokens={"subtoken_mean": 28.27, "subtoken_p50": 28, "subtoken_p90": 34, "subtoken_max": 50}
+14:04:47 | INFO |   [Thyroid] n=2,289 diversity={"n_captions": 2289, "tokens_total": 40448, "unique_unigrams": 148, "unique_bigrams": 513, "distinct_1": 0.0037, "distinct_2": 0.0134, "length_mean_words": 17.67, "length_p50_words": 17, "length_p90_words": 22} tokens={"subtoken_mean": 22.6, "subtoken_p50": 21, "subtoken_p90": 29, "subtoken_max": 37}
+14:04:47 | INFO | Comparison (pre-LLM → post-LLM):
+14:04:47 | INFO |   GLOBAL distinct_1 0.0047 → 0.0073 | distinct_2 0.0162 → 0.0474 | len_mean 12.66 → 19.28 | subtok_mean 17.69 → 25.64
+14:04:47 | INFO |   [BrEaST-Lesions_USG-images_and_masks] distinct_1 0.0184 → 0.0466 | distinct_2 0.053 → 0.2342 | len_mean 51.65 → 36.69 | subtok_mean 104.1 → 64.17
+14:04:47 | INFO |   [Dataset_BUSI_with_GT] distinct_1 0.0059 → 0.0064 | distinct_2 0.014 → 0.0168 | len_mean 8.32 → 17.74 | subtok_mean 10.33 → 21.92
+14:04:47 | INFO |   [Liver_ultrasound] distinct_1 0.0061 → 0.0076 | distinct_2 0.0146 → 0.0183 | len_mean 8.44 → 17.11 | subtok_mean 10.43 → 22.26
+14:04:47 | INFO |   [Lung_ultrasound] distinct_1 0.0047 → 0.0166 | distinct_2 0.0127 → 0.0952 | len_mean 18.61 → 21.33 | subtok_mean 23.56 → 28.27
+14:04:47 | INFO |   [Thyroid] distinct_1 0.0017 → 0.0037 | distinct_2 0.0042 → 0.0134 | len_mean 8.52 → 17.67 | subtok_mean 10.44 → 22.6
+14:04:47 | INFO |   [train] wrote augmented split (+llm_caption) → train_df.parquet & train_df.csv
+14:04:47 | INFO |   [val] wrote augmented split (+llm_caption) → val_df.parquet & val_df.csv
+14:04:47 | INFO |   [test] wrote augmented split (+llm_caption) → test_df.parquet & test_df.csv
+14:04:47 | INFO |   [full] wrote augmented split (+llm_caption) → full_df.parquet & full_df.csv
+14:04:48 | INFO |   [held_out] wrote augmented split (+llm_caption) → held_out_df.parquet & held_out_df.csv
+14:04:48 | INFO | Aggregate report → /home/zhuoyangl/tryout/bmi702/logs/llm_captions/llm_captions_20260425_140245_report.json
+14:04:48 | INFO | ========================================================================
+14:04:48 | INFO | Sample captions (5 of 5114):
+14:04:48 | INFO |   — [Thyroid] tiroides101 (36).png
+14:04:48 | INFO |       metadata : Tissue=thyroid; Condition=malignant
+14:04:48 | INFO |       caption  : Malignant finding in the thyroid tissue observed; the lesion is classified as malignant, consistent with the diagnostic evaluation.
+14:04:48 | INFO |   — [Thyroid] tiroides281.png
+14:04:48 | INFO |       metadata : Tissue=thyroid; Condition=benign
+14:04:48 | INFO |       caption  : Benign thyroid tissue identified on ultrasound; no concerning features noted. Diagnosis confirms normal thyroid architecture and composition.
+14:04:48 | INFO |   — [Thyroid] 4B_78.png
+14:04:48 | INFO |       metadata : Tissue=thyroid; Condition=malignant
+14:04:48 | INFO |       caption  : Findings show a malignant lesion within the thyroid tissue, confirming malignant condition in the thyroids.
+14:04:48 | INFO |   — [Thyroid] tiroides89.png
+14:04:48 | INFO |       metadata : Tissue=thyroid; Condition=benign
+14:04:48 | INFO |       caption  : Ultrasound of the thyroid demonstrates benign tissue with stable morphology and no signs of pathology. Findings are consistent with a normal thyroid.
+14:04:48 | INFO |   — [Thyroid] tiroides43.png
+14:04:48 | INFO |       metadata : Tissue=thyroid; Condition=normal
+14:04:48 | INFO |       caption  : Findings in the thyroid are normal: symmetric parenchyma, uniform echogenicity, and absence of nodules or pathologic changes, classified as BI-RADS 2.
+14:04:48 | INFO | ========================================================================
+14:04:48 | INFO | Done.
